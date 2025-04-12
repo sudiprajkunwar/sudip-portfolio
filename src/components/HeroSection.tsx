@@ -34,10 +34,10 @@ const HeroSection = () => {
           }`}
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-white">
-            Hello, I'm <span className="text-gradient-purple">Your Name</span>
+            Hello, I'm <span className="text-gradient-purple">Sudip Raj Kunwar</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            I create stunning digital experiences with modern web technologies
+            Senior Software Engineer with 4+ years of experience building modern web applications
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
