@@ -14,11 +14,16 @@ const HeroSection = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden py-20"
     >
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-purple-900 z-0"></div>
+      {/* Background image with gradient overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center z-0"
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(26, 31, 44, 0.85), rgba(126, 105, 171, 0.85)), url(https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)`,
+        }}
+      ></div>
       
       {/* Animated dot grid */}
-      <div className="absolute inset-0 opacity-30 z-0">
+      <div className="absolute inset-0 opacity-20 z-0">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMSIvPjwvZz48L3N2Zz4=')] bg-[length:20px_20px]"></div>
       </div>
 
@@ -28,18 +33,18 @@ const HeroSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-gradient">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-white">
             Hello, I'm <span className="text-gradient-purple">Your Name</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
             I create stunning digital experiences with modern web technologies
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="#projects"
+              href="#about"
               className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium hover:shadow-lg hover:from-purple-700 hover:to-blue-600 transition-all transform hover:-translate-y-1"
             >
-              View My Work
+              About Me
             </a>
             <a
               href="#contact"
