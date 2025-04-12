@@ -1,44 +1,25 @@
 
 import { useState, useEffect, useRef } from "react";
-
-interface Skill {
-  name: string;
-  icon: string;
-  color: string;
-}
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 
 const SkillsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement | null>(null);
 
-  const skillCategories = [
-    {
-      title: "Frontend",
-      skills: [
-        { name: "HTML & CSS", icon: "🌐", color: "from-pink-500 to-rose-500" },
-        { name: "JavaScript", icon: "📜", color: "from-yellow-400 to-amber-500" },
-        { name: "TypeScript", icon: "🔷", color: "from-blue-400 to-blue-600" },
-        { name: "React", icon: "⚛️", color: "from-cyan-400 to-cyan-600" }
-      ]
-    },
-    {
-      title: "Backend",
-      skills: [
-        { name: "Node.js", icon: "🟢", color: "from-green-400 to-green-600" },
-        { name: "Express", icon: "🚂", color: "from-gray-400 to-gray-600" },
-        { name: "MongoDB", icon: "🍃", color: "from-green-500 to-emerald-600" },
-        { name: "PostgreSQL", icon: "🐘", color: "from-blue-500 to-indigo-600" }
-      ]
-    },
-    {
-      title: "Design",
-      skills: [
-        { name: "UI/UX Design", icon: "🎨", color: "from-purple-400 to-purple-600" },
-        { name: "Figma", icon: "🖌️", color: "from-purple-500 to-violet-600" },
-        { name: "Tailwind CSS", icon: "🌬️", color: "from-cyan-500 to-blue-500" },
-        { name: "Responsive Design", icon: "📱", color: "from-indigo-400 to-indigo-600" }
-      ]
-    }
+  const skills = [
+    { name: "HTML & CSS", icon: "🌐", color: "bg-pink-500" },
+    { name: "JavaScript", icon: "📜", color: "bg-yellow-400" },
+    { name: "TypeScript", icon: "🔷", color: "bg-blue-400" },
+    { name: "React", icon: "⚛️", color: "bg-cyan-400" },
+    { name: "Node.js", icon: "🟢", color: "bg-green-400" },
+    { name: "Express", icon: "🚂", color: "bg-gray-400" },
+    { name: "MongoDB", icon: "🍃", color: "bg-green-500" },
+    { name: "PostgreSQL", icon: "🐘", color: "bg-blue-500" },
+    { name: "UI/UX Design", icon: "🎨", color: "bg-purple-400" },
+    { name: "Figma", icon: "🖌️", color: "bg-purple-500" },
+    { name: "Tailwind CSS", icon: "🌬️", color: "bg-cyan-500" },
+    { name: "Responsive Design", icon: "📱", color: "bg-indigo-400" }
   ];
 
   useEffect(() => {
@@ -92,42 +73,86 @@ const SkillsSection = () => {
           </p>
         </div>
 
-        <div className="space-y-16">
-          {skillCategories.map((category, categoryIndex) => (
-            <div 
-              key={category.title}
-              className={`transition-all duration-1000 ease-out ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-              }`}
-              style={{ transitionDelay: `${categoryIndex * 200 + 400}ms` }}
-            >
-              <h3 className="text-2xl font-bold text-white mb-8 text-center">
-                {category.title}
-              </h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {category.skills.map((skill, index) => (
-                  <div
-                    key={skill.name}
-                    className="glass-morphism rounded-xl overflow-hidden transform transition-all duration-500 hover:-translate-y-2"
-                  >
-                    <div className={`h-2 bg-gradient-to-r ${skill.color}`}></div>
-                    <div className="p-6">
-                      <div className="flex items-center mb-2">
-                        <span className="text-3xl mr-3">{skill.icon}</span>
-                        <h4 className="text-xl font-semibold text-white">{skill.name}</h4>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+        <div 
+          className={`glass-morphism p-8 rounded-2xl mb-16 transition-all duration-1000 delay-400 ease-out ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <div className="flex flex-wrap gap-3 justify-center">
+            {skills.map((skill, index) => (
+              <Badge
+                key={skill.name}
+                className={`text-base py-2 px-4 ${skill.color} bg-opacity-20 border border-opacity-30 hover:bg-opacity-30 transition-all duration-300 hover:-translate-y-1`}
+                variant="outline"
+              >
+                <span className="text-xl mr-2">{skill.icon}</span>
+                {skill.name}
+              </Badge>
+            ))}
+          </div>
         </div>
 
-        <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div 
+          className={`glass-morphism p-8 rounded-2xl transition-all duration-1000 delay-600 ease-out ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <h3 className="text-2xl font-bold mb-8 text-white text-center">Professional Experience</h3>
+          
+          <div className="space-y-10">
+            {/* Company 1 */}
+            <div className="border-l-2 border-purple-500 pl-6 relative">
+              <div className="absolute w-4 h-4 bg-purple-500 rounded-full -left-[9px] top-1"></div>
+              <div className="flex flex-col md:flex-row md:items-center mb-3 gap-2">
+                <h4 className="text-xl font-semibold text-white">Senior Frontend Developer</h4>
+                <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
+                <span className="text-purple-400 font-medium">TechCorp Inc.</span>
+                <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
+                <span className="text-gray-400">2021 - Present</span>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Led the frontend development team in building responsive web applications 
+                using React, TypeScript, and Tailwind CSS. Implemented CI/CD pipelines and 
+                improved site performance by 40%. Mentored junior developers and collaborated 
+                with design and backend teams to deliver high-quality products.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="outline" className="bg-blue-500/10 border-blue-500/30 text-blue-300">React</Badge>
+                <Badge variant="outline" className="bg-blue-400/10 border-blue-400/30 text-blue-200">TypeScript</Badge>
+                <Badge variant="outline" className="bg-cyan-500/10 border-cyan-500/30 text-cyan-300">Tailwind CSS</Badge>
+                <Badge variant="outline" className="bg-red-500/10 border-red-500/30 text-red-300">Jest</Badge>
+              </div>
+            </div>
+            
+            {/* Company 2 */}
+            <div className="border-l-2 border-blue-500 pl-6 relative">
+              <div className="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-1"></div>
+              <div className="flex flex-col md:flex-row md:items-center mb-3 gap-2">
+                <h4 className="text-xl font-semibold text-white">Web Developer</h4>
+                <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
+                <span className="text-blue-400 font-medium">Digital Solutions Ltd.</span>
+                <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
+                <span className="text-gray-400">2019 - 2021</span>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Developed and maintained client websites and web applications. Worked with a 
+                variety of technologies including JavaScript, Node.js, and MongoDB. Collaborated 
+                with designers to implement responsive and accessible interfaces. Participated in 
+                code reviews and documented technical specifications.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="outline" className="bg-yellow-400/10 border-yellow-400/30 text-yellow-300">JavaScript</Badge>
+                <Badge variant="outline" className="bg-green-500/10 border-green-500/30 text-green-300">Node.js</Badge>
+                <Badge variant="outline" className="bg-green-600/10 border-green-600/30 text-green-400">MongoDB</Badge>
+                <Badge variant="outline" className="bg-indigo-500/10 border-indigo-500/30 text-indigo-300">Express</Badge>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div 
-            className={`glass-morphism p-8 rounded-xl transition-all duration-1000 delay-1000 ease-out ${
+            className={`glass-morphism p-8 rounded-xl transition-all duration-1000 delay-800 ease-out ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
             }`}
           >
@@ -151,25 +176,25 @@ const SkillsSection = () => {
           </div>
 
           <div 
-            className={`glass-morphism p-8 rounded-xl transition-all duration-1000 delay-1200 ease-out ${
+            className={`glass-morphism p-8 rounded-xl transition-all duration-1000 delay-1000 ease-out ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
             }`}
           >
-            <h3 className="text-2xl font-bold mb-6 text-gradient-purple">Experience</h3>
+            <h3 className="text-2xl font-bold mb-6 text-gradient-purple">Certifications</h3>
             <ul className="space-y-6">
               <li>
                 <div className="flex justify-between mb-1">
-                  <h4 className="font-semibold text-white">Senior Frontend Developer</h4>
-                  <span className="text-gray-400 text-sm">2021 - Present</span>
+                  <h4 className="font-semibold text-white">AWS Certified Developer</h4>
+                  <span className="text-gray-400 text-sm">2022</span>
                 </div>
-                <p className="text-gray-300">Company Name</p>
+                <p className="text-gray-300">Amazon Web Services</p>
               </li>
               <li>
                 <div className="flex justify-between mb-1">
-                  <h4 className="font-semibold text-white">Web Developer</h4>
-                  <span className="text-gray-400 text-sm">2019 - 2021</span>
+                  <h4 className="font-semibold text-white">Professional Scrum Master I</h4>
+                  <span className="text-gray-400 text-sm">2021</span>
                 </div>
-                <p className="text-gray-300">Company Name</p>
+                <p className="text-gray-300">Scrum.org</p>
               </li>
             </ul>
           </div>
