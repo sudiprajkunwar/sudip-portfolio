@@ -18,19 +18,22 @@ const Navbar = () => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
 
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "py-3 backdrop-blur-xl bg-black/70 border-b border-white/10" : "py-5 bg-transparent"
+        isScrolled 
+          ? "py-3 bg-black/80 backdrop-blur-sm border-b border-white/10" 
+          : "py-5 bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-xl md:text-2xl font-bold text-gradient">
-            PORTFOLIO
+          <a href="#" className="text-xl md:text-2xl font-bold text-white">
+            <span className="text-cyan-400">Sudip</span>Raj
           </a>
 
           {/* Desktop Navigation */}
@@ -39,7 +42,7 @@ const Navbar = () => {
               <li key={item.name}>
                 <a
                   href={item.href}
-                  className="text-sm font-medium hover:text-purple-400 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-purple-400 after:transition-all hover:after:w-full"
+                  className="text-sm font-medium text-white/80 hover:text-cyan-400 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-cyan-400 after:transition-all hover:after:w-full"
                 >
                   {item.name}
                 </a>
@@ -60,14 +63,14 @@ const Navbar = () => {
 
       {/* Mobile Navigation Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full backdrop-blur-xl bg-black/80 border-b border-white/10">
+        <div className="md:hidden absolute top-full left-0 w-full bg-black/90 backdrop-blur-md border-b border-white/10">
           <div className="container mx-auto px-4 py-4">
             <ul className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="block py-2 text-white hover:text-purple-400 transition-colors"
+                    className="block py-2 text-white hover:text-cyan-400 transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}

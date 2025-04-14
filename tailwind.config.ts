@@ -105,6 +105,10 @@ export default {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-10px)' },
 				},
+				glow: {
+					'0%, 100%': { opacity: '1', boxShadow: '0 0 20px rgba(0, 200, 255, 0.3)' },
+					'50%': { opacity: '0.7', boxShadow: '0 0 40px rgba(0, 200, 255, 0.6)' },
+				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -113,6 +117,7 @@ export default {
 				'slide-in': 'slideIn 0.5s ease-out forwards',
 				'pulse-slow': 'pulse 3s ease-in-out infinite',
 				'float': 'float 3s ease-in-out infinite',
+				'glow': 'glow 3s ease-in-out infinite',
 			}
 		}
 	},
