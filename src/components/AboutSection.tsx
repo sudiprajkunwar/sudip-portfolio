@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from "react";
-import { Award, Briefcase, GraduationCap, User, MapPin, Mail, Code, Server, Database, Github } from "lucide-react";
+import { Award, Briefcase, GraduationCap, User, MapPin, Mail } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -27,33 +27,6 @@ const AboutSection = () => {
       observer.disconnect();
     };
   }, []);
-
-  const skills = [
-    { name: "JavaScript", color: "bg-yellow-400" },
-    { name: "TypeScript", color: "bg-blue-400" },
-    { name: "C++", color: "bg-purple-400" },
-    { name: "HTML5", color: "bg-orange-500" },
-    { name: "CSS3", color: "bg-blue-500" },
-    { name: "ReactJS", color: "bg-cyan-400" },
-    { name: "React Native", color: "bg-cyan-500" },
-    { name: "Redux", color: "bg-purple-500" },
-    { name: "Redux-Saga", color: "bg-purple-400" },
-    { name: "Webpack", color: "bg-blue-300" },
-    { name: "Node.js", color: "bg-green-500" },
-    { name: "Express", color: "bg-gray-500" },
-    { name: "NestJS", color: "bg-red-500" },
-    { name: "Bootstrap", color: "bg-purple-600" },
-    { name: "Material CSS", color: "bg-blue-600" },
-    { name: "Ant Design", color: "bg-blue-400" },
-    { name: "Testing", color: "bg-green-400" },
-    { name: "MySQL", color: "bg-blue-600" },
-    { name: "PostgreSQL", color: "bg-blue-500" },
-    { name: "MS SQL Server", color: "bg-indigo-500" },
-    { name: "Git", color: "bg-orange-600" },
-    { name: "GitHub", color: "bg-gray-700" },
-    { name: "Bitbucket", color: "bg-blue-700" },
-    { name: "GitLab", color: "bg-orange-500" },
-  ];
 
   return (
     <section
@@ -141,21 +114,6 @@ const AboutSection = () => {
                   and translate business requirements into technical solutions. Driven individual with 
                   the ability to adapt to any situation and a proven potential to grow self and others.
                 </p>
-
-                <div className="pt-4">
-                  <h4 className="text-xl font-semibold text-purple-400 mb-4">Technical Expertise</h4>
-                  <div className="flex flex-wrap gap-3">
-                    {skills.map((skill, index) => (
-                      <Badge
-                        key={skill.name}
-                        className={`text-base py-2 px-4 ${skill.color} bg-opacity-20 border border-opacity-30 hover:bg-opacity-30 transition-all duration-300 hover:-translate-y-1`}
-                        variant="outline"
-                      >
-                        {skill.name}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
               </div>
             </div>
           </div>

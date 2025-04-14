@@ -9,48 +9,47 @@ import { Skeleton } from "@/components/ui/skeleton";
 type Skill = {
   name: string;
   color: string;
-  level?: number; // 1-5 for skill level
   category: 'language' | 'framework' | 'database' | 'tool';
 };
 
 const skills: Skill[] = [
   // Languages
-  { name: "JavaScript", color: "bg-yellow-400", level: 5, category: 'language' },
-  { name: "TypeScript", color: "bg-blue-400", level: 4, category: 'language' },
-  { name: "C++", color: "bg-purple-400", level: 3, category: 'language' },
-  { name: "HTML5", color: "bg-orange-500", level: 5, category: 'language' },
-  { name: "CSS3", color: "bg-blue-500", level: 5, category: 'language' },
+  { name: "JavaScript", color: "bg-yellow-400", category: 'language' },
+  { name: "TypeScript", color: "bg-blue-400", category: 'language' },
+  { name: "C++", color: "bg-purple-400", category: 'language' },
+  { name: "HTML5", color: "bg-orange-500", category: 'language' },
+  { name: "CSS3", color: "bg-blue-500", category: 'language' },
   
   // Frameworks & Libraries
-  { name: "ReactJS", color: "bg-cyan-400", level: 5, category: 'framework' },
-  { name: "React Native", color: "bg-cyan-500", level: 4, category: 'framework' },
-  { name: "Redux", color: "bg-purple-500", level: 4, category: 'framework' },
-  { name: "Redux-Saga", color: "bg-purple-400", level: 3, category: 'framework' },
-  { name: "Webpack", color: "bg-blue-300", level: 3, category: 'framework' },
-  { name: "Node.js", color: "bg-green-500", level: 4, category: 'framework' },
-  { name: "Express", color: "bg-gray-500", level: 4, category: 'framework' },
-  { name: "NestJS", color: "bg-red-500", level: 3, category: 'framework' },
-  { name: "Bootstrap", color: "bg-purple-600", level: 4, category: 'framework' },
-  { name: "Material CSS", color: "bg-blue-600", level: 4, category: 'framework' },
-  { name: "Ant Design", color: "bg-blue-400", level: 4, category: 'framework' },
-  { name: "Testing", color: "bg-green-400", level: 3, category: 'framework' },
+  { name: "ReactJS", color: "bg-cyan-400", category: 'framework' },
+  { name: "React Native", color: "bg-cyan-500", category: 'framework' },
+  { name: "Redux", color: "bg-purple-500", category: 'framework' },
+  { name: "Redux-Saga", color: "bg-purple-400", category: 'framework' },
+  { name: "Webpack", color: "bg-blue-300", category: 'framework' },
+  { name: "Node.js", color: "bg-green-500", category: 'framework' },
+  { name: "Express", color: "bg-gray-500", category: 'framework' },
+  { name: "NestJS", color: "bg-red-500", category: 'framework' },
+  { name: "Bootstrap", color: "bg-purple-600", category: 'framework' },
+  { name: "Material CSS", color: "bg-blue-600", category: 'framework' },
+  { name: "Ant Design", color: "bg-blue-400", category: 'framework' },
+  { name: "Testing", color: "bg-green-400", category: 'framework' },
   
   // Databases
-  { name: "MySQL", color: "bg-blue-600", level: 4, category: 'database' },
-  { name: "PostgreSQL", color: "bg-blue-500", level: 4, category: 'database' },
-  { name: "MS SQL Server", color: "bg-indigo-500", level: 3, category: 'database' },
+  { name: "MySQL", color: "bg-blue-600", category: 'database' },
+  { name: "PostgreSQL", color: "bg-blue-500", category: 'database' },
+  { name: "MS SQL Server", color: "bg-indigo-500", category: 'database' },
   
   // Tools
-  { name: "Git", color: "bg-orange-600", level: 5, category: 'tool' },
-  { name: "GitHub", color: "bg-gray-700", level: 5, category: 'tool' },
-  { name: "Bitbucket", color: "bg-blue-700", level: 4, category: 'tool' },
-  { name: "GitLab", color: "bg-orange-500", level: 4, category: 'tool' },
-  { name: "Trello", color: "bg-blue-500", level: 4, category: 'tool' },
-  { name: "Slack", color: "bg-emerald-500", level: 5, category: 'tool' },
-  { name: "MS Teams", color: "bg-indigo-600", level: 4, category: 'tool' },
-  { name: "Jira", color: "bg-blue-600", level: 4, category: 'tool' },
-  { name: "Scrum", color: "bg-teal-500", level: 4, category: 'tool' },
-  { name: "Kanban", color: "bg-teal-600", level: 4, category: 'tool' },
+  { name: "Git", color: "bg-orange-600", category: 'tool' },
+  { name: "GitHub", color: "bg-gray-700", category: 'tool' },
+  { name: "Bitbucket", color: "bg-blue-700", category: 'tool' },
+  { name: "GitLab", color: "bg-orange-500", category: 'tool' },
+  { name: "Trello", color: "bg-blue-500", category: 'tool' },
+  { name: "Slack", color: "bg-emerald-500", category: 'tool' },
+  { name: "MS Teams", color: "bg-indigo-600", category: 'tool' },
+  { name: "Jira", color: "bg-blue-600", category: 'tool' },
+  { name: "Scrum", color: "bg-teal-500", category: 'tool' },
+  { name: "Kanban", color: "bg-teal-600", category: 'tool' },
 ];
 
 const iconByCategory = {
@@ -179,19 +178,6 @@ const TechnicalExpertiseSection = () => {
                         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div className="z-10 flex flex-col items-center">
                           <span className="font-medium text-white mb-2">{skill.name}</span>
-                          
-                          {skill.level && (
-                            <div className="flex space-x-1 mt-2">
-                              {[...Array(5)].map((_, i) => (
-                                <div 
-                                  key={i} 
-                                  className={`w-1.5 h-6 rounded-full transition-all ${
-                                    i < skill.level! ? skill.color : 'bg-gray-700'
-                                  }`} 
-                                />
-                              ))}
-                            </div>
-                          )}
                         </div>
                       </div>
                     </motion.div>
