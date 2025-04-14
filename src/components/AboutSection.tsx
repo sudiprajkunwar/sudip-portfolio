@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from "react";
-import { Award, Briefcase, GraduationCap, User, MapPin, Mail, Code, Server, Database, Git } from "lucide-react";
+import { Award, Briefcase, GraduationCap, User, MapPin, Mail, Code, Server, Database, Github } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 
