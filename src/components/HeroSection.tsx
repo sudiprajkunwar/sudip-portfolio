@@ -18,14 +18,18 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(26, 31, 44, 0.85), rgba(126, 105, 171, 0.85)), url(https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)`,
+          backgroundImage: `linear-gradient(to right, rgba(20, 20, 30, 0.9), rgba(90, 60, 140, 0.8)), url(https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80)`,
         }}
       ></div>
       
-      {/* Animated dot grid */}
+      {/* Floating particles */}
       <div className="absolute inset-0 opacity-20 z-0">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMSIvPjwvZz48L3N2Zz4=')] bg-[length:20px_20px]"></div>
       </div>
+
+      {/* Aesthetic geometric shapes */}
+      <div className="absolute top-20 right-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-10 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
 
       <div className="container relative z-10 mx-auto px-4 text-center">
         <div
@@ -36,7 +40,7 @@ const HeroSection = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-white">
             Hello, I'm <span className="text-gradient-purple">Sudip Raj Kunwar</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
             Senior Software Engineer with 4+ years of experience building modern web applications
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -48,7 +52,7 @@ const HeroSection = () => {
             </a>
             <a
               href="#contact"
-              className="px-8 py-3 rounded-full bg-transparent border border-white/20 text-white font-medium hover:bg-white/10 transition-all"
+              className="px-8 py-3 rounded-full glass-morphism text-white font-medium hover:bg-white/10 transition-all"
             >
               Contact Me
             </a>

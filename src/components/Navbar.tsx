@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "py-4 glass-morphism" : "py-6 bg-transparent"
+        isScrolled ? "py-3 backdrop-blur-xl bg-black/70 border-b border-white/10" : "py-5 bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
@@ -60,7 +60,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full glass-morphism">
+        <div className="md:hidden absolute top-full left-0 w-full backdrop-blur-xl bg-black/80 border-b border-white/10">
           <div className="container mx-auto px-4 py-4">
             <ul className="flex flex-col space-y-4">
               {navItems.map((item) => (

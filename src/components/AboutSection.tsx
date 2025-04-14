@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from "react";
-import { Award, Briefcase, GraduationCap, User, MapPin, Mail } from "lucide-react";
+import { Award, User, MapPin, Mail, GraduationCap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -51,7 +51,7 @@ const AboutSection = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {/* Profile image and info cards */}
           <div 
             className={`transition-all duration-1000 delay-300 ease-out ${
@@ -119,154 +119,98 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Skills section with chips */}
-        <div 
-          className={`glass-morphism p-8 rounded-3xl mt-12 transition-all duration-1000 delay-700 ease-out ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <h3 className="text-2xl font-bold mb-8 text-white text-center">Professional Experience</h3>
-          
-          <div className="space-y-12">
-            {/* Company 1 */}
-            <div className="border-l-2 border-purple-500 pl-6 relative">
-              <div className="absolute w-4 h-4 bg-purple-500 rounded-full -left-[9px] top-1"></div>
-              <div className="flex flex-col md:flex-row md:items-center mb-3 gap-2">
-                <h4 className="text-xl font-semibold text-white">Senior Software Engineer</h4>
-                <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
-                <span className="text-purple-400 font-medium">Leapfrog Technology</span>
-                <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
-                <span className="text-gray-400">September 2021 - Present</span>
-              </div>
-              <p className="text-gray-300 mb-4">
-                Working with a team of software engineers to create high-quality software within agreed project deadlines. Making architectural decisions, designing and implementing business logic using REST APIs, and maintaining efficient, reusable, and reliable software.
-              </p>
-              
-              <div className="mt-6">
-                <h5 className="text-lg font-semibold text-white mb-3">Project: Vyaguta</h5>
-                <p className="text-gray-300 mb-3">
-                  Enterprise Resource Planning system for managing day-to-day business activities such as Employee Management, Project Management, and Resource Management.
-                </p>
-                <h6 className="text-md font-semibold text-purple-300 mb-2">Role:</h6>
-                <ul className="list-disc pl-5 text-gray-300 space-y-1 mb-4">
-                  <li>Collaborated with team members to create efficient and scalable data models</li>
-                  <li>Configured and wrote base code for both front end and back end</li>
-                  <li>Developed front end using ReactJs and TypeScript</li>
-                  <li>Developed back end using Express, NestJS, MySQL, and PostgreSQL</li>
-                  <li>Deployed latest builds to development and production servers</li>
-                </ul>
-              </div>
-
-              <div className="mt-6">
-                <h5 className="text-lg font-semibold text-white mb-3">Project: SuperCare Health</h5>
-                <p className="text-gray-300 mb-3">
-                  Web application aimed at revolutionizing medical record management by facilitating paperless workflows for efficient maintenance of patient records.
-                </p>
-                <h6 className="text-md font-semibold text-purple-300 mb-2">Role:</h6>
-                <ul className="list-disc pl-5 text-gray-300 space-y-1 mb-4">
-                  <li>Collaborated with team to design scalable data models</li>
-                  <li>Developed front end using React.js and back end using Express and MongoDB</li>
-                  <li>Designed and created user-friendly UI</li>
-                  <li>Optimized application performance through research and feature implementation</li>
-                </ul>
-              </div>
-
-              <div className="mt-6">
-                <h5 className="text-lg font-semibold text-white mb-3">Project: Delivery Track</h5>
-                <p className="text-gray-300 mb-3">
-                  Mobile application designed to assist delivery drivers in efficiently navigating to customers' homes to deliver medical equipment.
-                </p>
-                <h6 className="text-md font-semibold text-purple-300 mb-2">Role:</h6>
-                <ul className="list-disc pl-5 text-gray-300 space-y-1">
-                  <li>Developed front end with React Native for a user-friendly interface</li>
-                  <li>Built back end using Express.js and MongoDB for data management</li>
-                  <li>Designed intuitive UI for delivery drivers</li>
-                  <li>Created comprehensive API documentation</li>
-                </ul>
-              </div>
-              
-              <div className="flex flex-wrap gap-2 mt-4">
-                <Badge variant="outline" className="bg-blue-500/10 border-blue-500/30 text-blue-300">React</Badge>
-                <Badge variant="outline" className="bg-blue-400/10 border-blue-400/30 text-blue-200">TypeScript</Badge>
-                <Badge variant="outline" className="bg-cyan-500/10 border-cyan-500/30 text-cyan-300">React Native</Badge>
-                <Badge variant="outline" className="bg-green-500/10 border-green-500/30 text-green-300">Node.js</Badge>
-                <Badge variant="outline" className="bg-red-500/10 border-red-500/30 text-red-300">NestJS</Badge>
-                <Badge variant="outline" className="bg-blue-500/10 border-blue-500/30 text-blue-300">MySQL</Badge>
-                <Badge variant="outline" className="bg-blue-600/10 border-blue-600/30 text-blue-300">PostgreSQL</Badge>
-              </div>
-            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Experience section - now in left column */}
+          <div 
+            className={`glass-morphism p-8 rounded-3xl transition-all duration-1000 delay-700 ease-out ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+          >
+            <h3 className="text-2xl font-bold mb-8 text-white">Professional Experience</h3>
             
-            {/* Company 2 */}
-            <div className="border-l-2 border-blue-500 pl-6 relative">
-              <div className="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-1"></div>
-              <div className="flex flex-col md:flex-row md:items-center mb-3 gap-2">
-                <h4 className="text-xl font-semibold text-white">Front-End Developer</h4>
-                <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
-                <span className="text-blue-400 font-medium">Alpha Beta Theta Technologies</span>
-                <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
-                <span className="text-gray-400">August 2020 - August 2021</span>
-              </div>
-              <p className="text-gray-300 mb-4">
-                Identified core technical problems and collaborated with team members to develop robust solutions. Created self-contained, reusable components and conducted code reviews to maintain integrity. Helped manage CI/CD processes and actively participated in improving organizational culture.
-              </p>
-              
-              <div className="mt-6">
-                <h5 className="text-lg font-semibold text-white mb-3">Project: Human Resources Management System</h5>
-                <p className="text-gray-300 mb-3">
-                  System developed to track clients and candidates, allowing users to update candidate status, send emails, and get updates on other candidates.
+            <div className="space-y-8">
+              {/* Company 1 */}
+              <div className="border-l-2 border-purple-500 pl-6 relative">
+                <div className="absolute w-4 h-4 bg-purple-500 rounded-full -left-[9px] top-1"></div>
+                <div className="flex flex-col md:flex-row md:items-center mb-3 gap-2">
+                  <h4 className="text-xl font-semibold text-white">Senior Software Engineer</h4>
+                  <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
+                  <span className="text-purple-400 font-medium">Leapfrog Technology</span>
+                </div>
+                <p className="text-gray-400 mb-2">September 2021 - Present</p>
+                <p className="text-gray-300 mb-4">
+                  Working with a team of software engineers to create high-quality software within agreed project deadlines.
                 </p>
-                <h6 className="text-md font-semibold text-blue-300 mb-2">Role:</h6>
-                <ul className="list-disc pl-5 text-gray-300 space-y-1 mb-4">
-                  <li>Collaborated with team members to develop efficient data models</li>
-                  <li>Configured and wrote base code for the front end</li>
-                  <li>Developed the application using ReactJS</li>
-                  <li>Maintained code integrity using TypeScript</li>
-                  <li>Deployed latest builds to development and production servers</li>
-                </ul>
-              </div>
-
-              <div className="mt-6">
-                <h5 className="text-lg font-semibold text-white mb-3">Project: Reporting Web Applications</h5>
-                <p className="text-gray-300 mb-3">
-                  Web application that helps users view candidates' and engineers' reports, update status, and see the rank of marketers, managers, and engineers.
-                </p>
-                <h6 className="text-md font-semibold text-blue-300 mb-2">Role:</h6>
-                <ul className="list-disc pl-5 text-gray-300 space-y-1">
-                  <li>Developed front-end web applications for sales automation</li>
-                  <li>Collaborated with team members to solve existing problems</li>
-                  <li>Refactored older code and added new features</li>
-                  <li>Migrated the system to a newer version</li>
-                  <li>Researched and implemented performance improvements</li>
-                </ul>
+                
+                <div className="flex flex-wrap gap-2 mt-4">
+                  <Badge variant="outline" className="bg-blue-500/10 border-blue-500/30 text-blue-300">React</Badge>
+                  <Badge variant="outline" className="bg-blue-400/10 border-blue-400/30 text-blue-200">TypeScript</Badge>
+                  <Badge variant="outline" className="bg-green-500/10 border-green-500/30 text-green-300">Node.js</Badge>
+                </div>
               </div>
               
-              <div className="flex flex-wrap gap-2 mt-4">
-                <Badge variant="outline" className="bg-yellow-400/10 border-yellow-400/30 text-yellow-300">JavaScript</Badge>
-                <Badge variant="outline" className="bg-blue-400/10 border-blue-400/30 text-blue-200">TypeScript</Badge>
-                <Badge variant="outline" className="bg-cyan-400/10 border-cyan-400/30 text-cyan-300">React</Badge>
-                <Badge variant="outline" className="bg-purple-500/10 border-purple-500/30 text-purple-300">Redux</Badge>
-                <Badge variant="outline" className="bg-indigo-500/10 border-indigo-500/30 text-indigo-300">CI/CD</Badge>
+              {/* Company 2 */}
+              <div className="border-l-2 border-blue-500 pl-6 relative">
+                <div className="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-1"></div>
+                <div className="flex flex-col md:flex-row md:items-center mb-3 gap-2">
+                  <h4 className="text-xl font-semibold text-white">Front-End Developer</h4>
+                  <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
+                  <span className="text-blue-400 font-medium">Alpha Beta Theta Technologies</span>
+                </div>
+                <p className="text-gray-400 mb-2">August 2020 - August 2021</p>
+                <p className="text-gray-300 mb-4">
+                  Identified core technical problems and collaborated with team members to develop robust solutions.
+                </p>
+                
+                <div className="flex flex-wrap gap-2 mt-4">
+                  <Badge variant="outline" className="bg-yellow-400/10 border-yellow-400/30 text-yellow-300">JavaScript</Badge>
+                  <Badge variant="outline" className="bg-cyan-400/10 border-cyan-400/30 text-cyan-300">React</Badge>
+                  <Badge variant="outline" className="bg-purple-500/10 border-purple-500/30 text-purple-300">Redux</Badge>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-1 gap-8">
-          <div 
-            className={`glass-morphism p-8 rounded-xl transition-all duration-1000 delay-800 ease-out ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-            }`}
-          >
-            <h3 className="text-2xl font-bold mb-6 text-gradient-purple">Education</h3>
-            <ul className="space-y-6">
-              <li>
-                <div className="flex justify-between mb-1">
-                  <h4 className="font-semibold text-white">Bachelor of Science in Computer Science and Information Technology</h4>
-                  <span className="text-gray-400 text-sm">2015 - 2020</span>
-                </div>
-                <p className="text-gray-300">College of Applied Business (Tribhuvan University)</p>
-              </li>
-            </ul>
+          {/* Education and Projects - now in right column */}
+          <div className="space-y-8">
+            <div 
+              className={`glass-morphism p-8 rounded-xl transition-all duration-1000 delay-800 ease-out ${
+                isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+              }`}
+            >
+              <h3 className="text-2xl font-bold mb-6 text-gradient-purple">Education</h3>
+              <ul className="space-y-6">
+                <li>
+                  <div className="flex justify-between mb-1">
+                    <h4 className="font-semibold text-white">Bachelor of Science in Computer Science and Information Technology</h4>
+                    <span className="text-gray-400 text-sm">2015 - 2020</span>
+                  </div>
+                  <p className="text-gray-300">College of Applied Business (Tribhuvan University)</p>
+                </li>
+              </ul>
+            </div>
+            
+            <div 
+              className={`glass-morphism p-8 rounded-xl transition-all duration-1000 delay-900 ease-out ${
+                isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+              }`}
+            >
+              <h3 className="text-2xl font-bold mb-6 text-gradient-purple">Key Projects</h3>
+              <ul className="space-y-4">
+                <li>
+                  <h4 className="font-semibold text-white mb-1">Vyaguta - Enterprise Resource Planning</h4>
+                  <p className="text-gray-300 text-sm">Enterprise Resource Planning system for managing day-to-day business activities.</p>
+                </li>
+                <li>
+                  <h4 className="font-semibold text-white mb-1">SuperCare Health</h4>
+                  <p className="text-gray-300 text-sm">Web application for medical record management and paperless workflows.</p>
+                </li>
+                <li>
+                  <h4 className="font-semibold text-white mb-1">Delivery Track</h4>
+                  <p className="text-gray-300 text-sm">Mobile application for delivery drivers to navigate to customers' homes.</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
