@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Code, Database, Server, Smartphone } from "lucide-react";
 
 interface Project {
   id: number;
@@ -10,6 +10,7 @@ interface Project {
   image: string;
   liveUrl: string;
   githubUrl: string;
+  type: "Web" | "Mobile";
 }
 
 const ProjectsSection = () => {
@@ -19,30 +20,33 @@ const ProjectsSection = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A modern e-commerce platform built with React and Node.js. Features include user authentication, product catalog, shopping cart, and payment processing.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: "Web Application",
+      description: "Enterprise-level web application with comprehensive business management features.",
+      technologies: ["ReactJs", "TypeScript", "Express", "NestJs", "MySQL", "PostgreSQL", "MongoDB"],
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80",
       liveUrl: "#",
       githubUrl: "#",
+      type: "Web",
     },
     {
       id: 2,
+      title: "Mobile Application",
+      description: "Delivery tracking application for efficient route management and customer service.",
+      technologies: ["React Native", "Express", "MongoDB"],
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1020&q=80",
+      liveUrl: "#",
+      githubUrl: "#",
+      type: "Mobile",
+    },
+    {
+      id: 3,
       title: "Portfolio Website",
       description: "A responsive portfolio website showcasing my work and skills. Built with modern technologies and best practices for optimal performance.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       liveUrl: "#",
       githubUrl: "#",
-    },
-    {
-      id: 3,
-      title: "Task Management App",
-      description: "A comprehensive task management application to help users organize their work efficiently. Includes features like task creation, deadline setting, and progress tracking.",
-      technologies: ["Vue.js", "Firebase", "Vuex", "SCSS"],
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1020&q=80",
-      liveUrl: "#",
-      githubUrl: "#",
+      type: "Web",
     },
   ];
 
@@ -65,6 +69,13 @@ const ProjectsSection = () => {
       observer.disconnect();
     };
   }, []);
+
+  const getTypeIcon = (type: "Web" | "Mobile") => {
+    if (type === "Web") {
+      return <Server size={16} className="mr-1" />;
+    }
+    return <Smartphone size={16} className="mr-1" />;
+  };
 
   return (
     <section
@@ -106,6 +117,10 @@ const ProjectsSection = () => {
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-xs flex items-center">
+                  {getTypeIcon(project.type)}
+                  {project.type}
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
