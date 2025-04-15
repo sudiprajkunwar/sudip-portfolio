@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -78,14 +77,14 @@ const SkillsSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap gap-2 justify-center">
             {skills.map((skill, index) => (
               <Badge
                 key={skill.name}
-                className={`text-base py-2 px-4 ${skill.color} bg-opacity-20 border border-opacity-30 hover:bg-opacity-30 transition-all duration-300 hover:-translate-y-1`}
+                className={`text-xs py-1 px-2 ${skill.color} bg-opacity-20 border border-opacity-30 hover:bg-opacity-30 transition-all duration-300 hover:-translate-y-1`}
                 variant="outline"
               >
-                <span className="text-xl mr-2">{skill.icon}</span>
+                <span className="text-sm mr-1">{skill.icon}</span>
                 {skill.name}
               </Badge>
             ))}
