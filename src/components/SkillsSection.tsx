@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { GraduationCap, BookOpen, Calendar, MapPin } from "lucide-react";
 
 const SkillsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -155,53 +156,63 @@ const SkillsSection = () => {
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div 
-            className={`glass-morphism p-8 rounded-xl transition-all duration-1000 delay-800 ease-out ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-            }`}
-          >
-            <h3 className="text-2xl font-bold mb-6 text-gradient-purple">Education</h3>
-            <ul className="space-y-6">
-              <li>
-                <div className="flex justify-between mb-1">
-                  <h4 className="font-semibold text-white">Bachelor's in Computer Science</h4>
-                  <span className="text-gray-400 text-sm">2016 - 2020</span>
+        {/* Redesigned Education Section */}
+        <div 
+          className={`mt-16 transition-all duration-1000 delay-800 ease-out ${
+            isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+          }`}
+        >
+          <h3 className="text-2xl font-bold mb-8 text-white text-center">Education</h3>
+          
+          <div className="max-w-3xl mx-auto">
+            <div className="glass-morphism p-8 rounded-xl border-t-4 border-purple-500 transform transition-all duration-500 hover:scale-[1.02] hover:shadow-purple-500/20 hover:shadow-lg">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                  <GraduationCap size={28} className="text-purple-400" />
                 </div>
-                <p className="text-gray-300">University Name</p>
-              </li>
-              <li>
-                <div className="flex justify-between mb-1">
-                  <h4 className="font-semibold text-white">Web Development Bootcamp</h4>
-                  <span className="text-gray-400 text-sm">2021</span>
+                
+                <div className="space-y-3">
+                  <h4 className="text-xl font-semibold text-white bg-gradient-to-r from-purple-400 to-white bg-clip-text text-transparent">
+                    Bachelor's in Computer Science
+                  </h4>
+                  
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-400">
+                    <div className="flex items-center gap-1.5">
+                      <BookOpen size={14} className="text-purple-500/80" />
+                      <span>Tribhuvan University</span>
+                    </div>
+                    
+                    <div className="flex items-center gap-1.5">
+                      <Calendar size={14} className="text-purple-500/80" />
+                      <span>2016 - 2020</span>
+                    </div>
+                    
+                    <div className="flex items-center gap-1.5">
+                      <MapPin size={14} className="text-purple-500/80" />
+                      <span>Kathmandu, Nepal</span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 text-sm">
+                    Studied core computer science principles, data structures, algorithms, 
+                    and software engineering practices. Specialized in web technologies and 
+                    distributed systems.
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    <Badge variant="outline" className="text-xs bg-purple-500/10 border-purple-500/30 text-purple-300">
+                      Computer Science
+                    </Badge>
+                    <Badge variant="outline" className="text-xs bg-blue-500/10 border-blue-500/30 text-blue-300">
+                      Software Engineering
+                    </Badge>
+                    <Badge variant="outline" className="text-xs bg-indigo-500/10 border-indigo-500/30 text-indigo-300">
+                      Algorithms
+                    </Badge>
+                  </div>
                 </div>
-                <p className="text-gray-300">Coding Academy</p>
-              </li>
-            </ul>
-          </div>
-
-          <div 
-            className={`glass-morphism p-8 rounded-xl transition-all duration-1000 delay-1000 ease-out ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
-            }`}
-          >
-            <h3 className="text-2xl font-bold mb-6 text-gradient-purple">Certifications</h3>
-            <ul className="space-y-6">
-              <li>
-                <div className="flex justify-between mb-1">
-                  <h4 className="font-semibold text-white">AWS Certified Developer</h4>
-                  <span className="text-gray-400 text-sm">2022</span>
-                </div>
-                <p className="text-gray-300">Amazon Web Services</p>
-              </li>
-              <li>
-                <div className="flex justify-between mb-1">
-                  <h4 className="font-semibold text-white">Professional Scrum Master I</h4>
-                  <span className="text-gray-400 text-sm">2021</span>
-                </div>
-                <p className="text-gray-300">Scrum.org</p>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
