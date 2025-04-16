@@ -7,25 +7,25 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
+    --background: 259 40% 10%;
     --foreground: 0 0% 100%;
-    --card: 0 0% 5%;
+    --card: 259 40% 13%;
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
+    --popover: 259 40% 12%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
-    --secondary: 0 0% 10%;
+    --primary: 266 100% 64%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 259 40% 18%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 15%;
+    --muted: 259 30% 20%;
     --muted-foreground: 0 0% 70%;
-    --accent: 0 0% 15%;
+    --accent: 259 30% 20%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 0 0% 70%;
+    --border: 259 30% 25%;
+    --input: 259 30% 25%;
+    --ring: 266 100% 64%;
     --radius: 0.75rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 0 0% 26.1%;
@@ -38,7 +38,7 @@
   }
 
   * {
-    @apply border-border selection:bg-gray-500/20 selection:text-white;
+    @apply border-border selection:bg-purple-500/20 selection:text-white;
   }
   
   body {
@@ -75,6 +75,10 @@
   
   .text-gradient-gray {
     @apply bg-gradient-to-r from-gray-400 to-white bg-clip-text text-transparent;
+  }
+
+  .text-gradient-purple {
+    @apply bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent;
   }
   
   .animate-delay-200 {
