@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -73,18 +74,18 @@ const SkillsSection = () => {
         </div>
 
         <div 
-          className={`glass-morphism p-8 rounded-2xl mb-16 transition-all duration-1000 delay-400 ease-out ${
+          className={`glass-morphism p-6 rounded-2xl mb-16 transition-all duration-1000 delay-400 ease-out ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="flex flex-wrap gap-2 justify-center">
+          <div className="flex flex-wrap gap-1.5 justify-center">
             {skills.map((skill, index) => (
               <Badge
                 key={skill.name}
-                className={`text-xs py-1 px-2 ${skill.color} bg-opacity-20 border border-opacity-30 hover:bg-opacity-30 transition-all duration-300 hover:-translate-y-1`}
+                className={`text-xs py-0.5 px-2 ${skill.color} bg-opacity-20 border border-opacity-30 hover:bg-opacity-30 transition-all duration-300 hover:-translate-y-1`}
                 variant="outline"
               >
-                <span className="text-sm mr-1">{skill.icon}</span>
+                <span className="text-xs mr-1">{skill.icon}</span>
                 {skill.name}
               </Badge>
             ))}
@@ -103,18 +104,21 @@ const SkillsSection = () => {
             <div className="border-l-2 border-purple-500 pl-6 relative">
               <div className="absolute w-4 h-4 bg-purple-500 rounded-full -left-[9px] top-1"></div>
               <div className="flex flex-col md:flex-row md:items-center mb-3 gap-2">
-                <h4 className="text-xl font-semibold text-white">Senior Frontend Developer</h4>
+                <h4 className="text-xl font-semibold text-white">Senior Software Engineer</h4>
                 <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
-                <span className="text-purple-400 font-medium">TechCorp Inc.</span>
+                <span className="text-purple-400 font-medium">Leapfrog Technology</span>
                 <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
-                <span className="text-gray-400">2021 - Present</span>
+                <span className="text-gray-400">September 2021 - Present</span>
               </div>
-              <p className="text-gray-300 mb-4">
-                Led the frontend development team in building responsive web applications 
-                using React, TypeScript, and Tailwind CSS. Implemented CI/CD pipelines and 
-                improved site performance by 40%. Mentored junior developers and collaborated 
-                with design and backend teams to deliver high-quality products.
-              </p>
+              <ul className="text-gray-300 mb-4 space-y-2 list-disc list-inside text-sm">
+                <li>Work with a team of software engineers in the creation of high-quality software within agreed project deadlines</li>
+                <li>Make architectural decisions in collaboration with technology experts</li>
+                <li>Design, build, and maintain efficient, reusable, and reliable software</li>
+                <li>Designing and developing business logic using REST APIs</li>
+                <li>Preparation, drafting, and review of software documentation and project reports</li>
+                <li>Implementing new software features and maintaining existing features</li>
+                <li>Refactoring, debugging, testing, and implementing changes to existing applications</li>
+              </ul>
               <div className="flex flex-wrap gap-2">
                 <Badge variant="outline" className="bg-blue-500/10 border-blue-500/30 text-blue-300">React</Badge>
                 <Badge variant="outline" className="bg-blue-400/10 border-blue-400/30 text-blue-200">TypeScript</Badge>
@@ -127,18 +131,20 @@ const SkillsSection = () => {
             <div className="border-l-2 border-blue-500 pl-6 relative">
               <div className="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-1"></div>
               <div className="flex flex-col md:flex-row md:items-center mb-3 gap-2">
-                <h4 className="text-xl font-semibold text-white">Web Developer</h4>
+                <h4 className="text-xl font-semibold text-white">Front-End Developer</h4>
                 <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
-                <span className="text-blue-400 font-medium">Digital Solutions Ltd.</span>
+                <span className="text-blue-400 font-medium">Alpha Beta Theta Technologies</span>
                 <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
-                <span className="text-gray-400">2019 - 2021</span>
+                <span className="text-gray-400">August 2020 - August 2021</span>
               </div>
-              <p className="text-gray-300 mb-4">
-                Developed and maintained client websites and web applications. Worked with a 
-                variety of technologies including JavaScript, Node.js, and MongoDB. Collaborated 
-                with designers to implement responsive and accessible interfaces. Participated in 
-                code reviews and documented technical specifications.
-              </p>
+              <ul className="text-gray-300 mb-4 space-y-2 list-disc list-inside text-sm">
+                <li>Identify core technical problems and collaborate with team members to come up with a robust solution</li>
+                <li>Creating self-contained, reusable components</li>
+                <li>Research and document new technologies and find better solutions to existing problems</li>
+                <li>Help manage CI/CD processes</li>
+                <li>Conduct code reviews to maintain the integrity of the code</li>
+                <li>Actively participate in improving organizational culture, processes, and standards</li>
+              </ul>
               <div className="flex flex-wrap gap-2">
                 <Badge variant="outline" className="bg-yellow-400/10 border-yellow-400/30 text-yellow-300">JavaScript</Badge>
                 <Badge variant="outline" className="bg-green-500/10 border-green-500/30 text-green-300">Node.js</Badge>
