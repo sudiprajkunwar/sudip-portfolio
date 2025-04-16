@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Code, Smartphone, Server, Database, Layers, LayoutGrid } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const WebMobileExpertiseSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,44 +30,40 @@ const WebMobileExpertiseSection = () => {
 
   const expertiseAreas = [
     {
-      title: "Web Development",
-      icon: <Code className="h-10 w-10 text-purple-500" />,
-      description: "Building high-performance, responsive web applications with modern frameworks and best practices.",
+      title: "Frontend Development",
+      icon: <Code className="h-10 w-10 text-indigo-500" />,
+      description: "Creating responsive, performant user interfaces with modern frameworks.",
       skills: [
-        "ReactJs", "TypeScript", "Next.js", "Express", "NestJs", "RESTful APIs", 
-        "GraphQL", "Redux", "Tailwind CSS", "Material UI", "Responsive Design"
+        "React", "TypeScript", "Next.js", "Tailwind CSS", "Redux", "Material UI"
       ],
-      projects: "Enterprise-level web applications with comprehensive business management features."
+      color: "from-indigo-500/20 to-indigo-700/20 border-indigo-500/30"
     },
     {
       title: "Mobile Development",
       icon: <Smartphone className="h-10 w-10 text-blue-500" />,
-      description: "Creating cross-platform mobile applications with native-like performance and exceptional user experience.",
+      description: "Building cross-platform mobile apps with native-like performance.",
       skills: [
-        "React Native", "Expo", "Native APIs", "Push Notifications", 
-        "Offline Storage", "Mobile UI/UX", "Authentication"
+        "React Native", "Expo", "Native APIs", "Mobile UI/UX"
       ],
-      projects: "Delivery tracking applications for efficient route management and customer service."
+      color: "from-blue-500/20 to-blue-700/20 border-blue-500/30"
     },
     {
-      title: "Backend Development",
+      title: "API Engineering",
       icon: <Server className="h-10 w-10 text-green-500" />,
-      description: "Developing robust server-side applications with scalable architecture and efficient performance.",
+      description: "Developing scalable APIs and server-side applications.",
       skills: [
-        "Node.js", "Express", "NestJs", "TypeScript", "API Development", 
-        "Authentication & Authorization", "Microservices"
+        "Node.js", "Express", "NestJs", "RESTful APIs", "GraphQL"
       ],
-      projects: "RESTful and GraphQL APIs that power frontend applications."
+      color: "from-green-500/20 to-green-700/20 border-green-500/30"
     },
     {
       title: "Database Management",
       icon: <Database className="h-10 w-10 text-yellow-500" />,
-      description: "Designing and implementing efficient database structures for optimal data management.",
+      description: "Designing efficient database structures for optimal data management.",
       skills: [
-        "MongoDB", "PostgreSQL", "MySQL", "Redis", "Database Design", 
-        "Data Modeling", "Performance Optimization"
+        "MongoDB", "PostgreSQL", "MySQL", "Redis"
       ],
-      projects: "Complex data architectures for enterprise applications."
+      color: "from-yellow-500/20 to-yellow-700/20 border-yellow-500/30"
     }
   ];
 
@@ -74,76 +71,61 @@ const WebMobileExpertiseSection = () => {
     <section
       id="expertise"
       ref={sectionRef}
-      className="py-20 md:py-32 relative bg-gradient-to-b from-black to-purple-950/30"
+      className="py-16 relative bg-gradient-to-b from-black to-purple-950/30"
     >
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMSIvPjwvZz48L3N2Zz4=')] bg-[length:20px_20px] opacity-5"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 
-            className={`text-3xl md:text-5xl font-bold mb-4 text-gradient-purple transition-all duration-1000 ease-out ${
+            className={`text-3xl md:text-4xl font-bold mb-4 text-gradient-purple transition-all duration-1000 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
             Technical Expertise
           </h2>
           <div 
-            className={`w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mb-6 transition-all duration-1000 delay-200 ease-out ${
+            className={`w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mb-4 transition-all duration-1000 delay-200 ease-out ${
               isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
             }`}
           ></div>
-          <p 
-            className={`text-lg text-gray-300 max-w-3xl mx-auto transition-all duration-1000 delay-300 ease-out ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
-          >
-            Specialized in building modern web and mobile applications with cutting-edge technologies
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {expertiseAreas.map((area, index) => (
             <div
               key={area.title}
-              className={`glass-morphism rounded-xl overflow-hidden transition-all duration-1000 ease-out hover:transform hover:-translate-y-2 ${
+              className={`transition-all duration-1000 ease-out ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
-              style={{ transitionDelay: `${index * 200}ms` }}
+              style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <div className="p-8">
-                <div className="flex flex-col md:flex-row items-start md:items-center gap-4 mb-4">
-                  <div className="p-4 rounded-full bg-white/5 border border-white/10">
-                    {area.icon}
+              <Card className={`h-full bg-gradient-to-br ${area.color} hover:shadow-lg hover:-translate-y-1 transition-all duration-300`}>
+                <CardHeader className="pb-2">
+                  <div className="flex items-center gap-3 mb-1">
+                    <div className="p-2 rounded-full bg-white/10">
+                      {area.icon}
+                    </div>
+                    <CardTitle className="text-xl text-white">{area.title}</CardTitle>
                   </div>
-                  <h3 className="text-2xl font-bold text-white">{area.title}</h3>
-                </div>
-                
-                <p className="text-gray-300 mb-6">
-                  {area.description}
-                </p>
-                
-                <div className="mb-6">
-                  <h4 className="text-sm uppercase tracking-wider text-purple-400 mb-3">Skills</h4>
-                  <div className="flex flex-wrap gap-2">
+                  <CardDescription className="text-gray-300">
+                    {area.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-1.5">
                     {area.skills.map(skill => (
                       <Badge 
                         key={skill} 
                         variant="outline" 
-                        className="bg-white/5 border-white/10 text-gray-300 hover:bg-white/10"
+                        className="bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 text-xs"
                       >
                         {skill}
                       </Badge>
                     ))}
                   </div>
-                </div>
-                
-                <div>
-                  <h4 className="text-sm uppercase tracking-wider text-purple-400 mb-3">Experience</h4>
-                  <p className="text-gray-300 text-sm">
-                    {area.projects}
-                  </p>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             </div>
           ))}
         </div>
