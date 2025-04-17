@@ -31,7 +31,7 @@ const AboutSection = () => {
     <section
       id="about"
       ref={sectionRef}
-      className="py-12 bg-black text-white relative overflow-hidden"
+      className="py-12 bg-gray-900 text-white relative overflow-hidden"
     >
       {/* Background Effect */}
       <div className="absolute inset-0 opacity-5">
@@ -57,31 +57,31 @@ const AboutSection = () => {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
             }`}
           >
-            <div className="relative rounded-lg overflow-hidden shadow-lg border border-gray-800 bg-gray-900 p-4">
+            <div className="relative rounded-lg overflow-hidden shadow-lg border border-gray-800 bg-gray-800 p-4">
               <img
-                src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?auto=format&fit=crop&w=800&q=80"
                 alt="Profile"
-                className="w-full h-auto grayscale rounded-lg shadow-md transition-transform duration-700 hover:scale-102"
+                className="w-full h-auto grayscale rounded-lg shadow-md transition-transform duration-700 hover:grayscale-0"
               />
               
               <div className="mt-4 space-y-3">
-                <h3 className="text-xl font-bold text-white">Sudip Sharma</h3>
-                <p className="text-gray-400 text-sm">Senior Software Engineer</p>
+                <h3 className="text-xl font-bold text-white">Prithvi Karki</h3>
+                <p className="text-gray-400 text-sm">Full Stack Developer</p>
                 
                 <div className="flex flex-wrap gap-2 pt-2">
                   <Badge variant="outline" className="bg-gray-800 text-gray-300 border-gray-700">React</Badge>
-                  <Badge variant="outline" className="bg-gray-800 text-gray-300 border-gray-700">TypeScript</Badge>
                   <Badge variant="outline" className="bg-gray-800 text-gray-300 border-gray-700">Node.js</Badge>
+                  <Badge variant="outline" className="bg-gray-800 text-gray-300 border-gray-700">TypeScript</Badge>
                 </div>
                 
                 <div className="grid grid-cols-2 gap-2 text-sm pt-2">
                   <div className="flex items-center text-gray-300">
                     <Mail size={14} className="text-gray-500 mr-2" />
-                    <span>sudip@example.com</span>
+                    <span>contact@prithvikarki.com</span>
                   </div>
                   <div className="flex items-center text-gray-300">
                     <MapPin size={14} className="text-gray-500 mr-2" />
-                    <span>Kathmandu, Nepal</span>
+                    <span>Portland, USA</span>
                   </div>
                 </div>
               </div>
@@ -95,7 +95,7 @@ const AboutSection = () => {
             }`}
           >
             {/* Professional Summary */}
-            <div className="bg-gray-900 p-5 rounded-lg border border-gray-800 shadow-lg">
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700 shadow-lg">
               <h3 className="text-lg font-bold mb-3 text-white flex items-center gap-2">
                 <User size={16} className="text-gray-400" />
                 Professional Overview
@@ -103,41 +103,42 @@ const AboutSection = () => {
               
               <div className="space-y-3 text-gray-300 text-sm">
                 <p className="leading-relaxed">
-                  Skilled Software Engineer with 4+ years of hands-on experience building, 
-                  optimizing, and supporting web-based applications for diverse industry 
-                  organizations. Passionate about implementing and launching new projects.
+                  Experienced Full Stack Developer with 6+ years of expertise in building and 
+                  scaling web applications. Specialized in React, Node.js, and modern JavaScript 
+                  frameworks with a strong focus on performance optimization and clean code practices.
                 </p>
                 
                 <p className="leading-relaxed">
-                  Ability to identify core technical problems, find better solutions to existing problems, 
-                  and translate business requirements into technical solutions.
+                  Passionate about creating intuitive user experiences and solving complex technical 
+                  challenges. Proven track record of delivering high-quality solutions for enterprise clients
+                  across various industries.
                 </p>
               </div>
             </div>
 
             {/* Experience Timeline */}
-            <div className="bg-gray-900 p-5 rounded-lg border border-gray-800 shadow-lg">
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700 shadow-lg">
               <h3 className="text-lg font-bold mb-3 text-white flex items-center gap-2">
                 <Briefcase size={16} className="text-gray-400" />
                 Experience
               </h3>
               
               <div className="space-y-4 relative">
-                <div className="absolute h-full w-0.5 bg-gray-800 left-1.5 top-1.5 z-0"></div>
+                <div className="absolute h-full w-0.5 bg-gray-700 left-1.5 top-1.5 z-0"></div>
                 
                 {/* Job 1 */}
                 <div className="relative pl-7">
                   <div className="absolute w-3 h-3 bg-white rounded-full left-0 top-1.5 z-10"></div>
                   <div>
                     <div className="flex items-center justify-between">
-                      <h4 className="text-white font-medium">Senior Software Engineer</h4>
-                      <Badge variant="outline" className="text-xs bg-gray-800 border-gray-700 text-gray-300">
+                      <h4 className="text-white font-medium">Senior Full Stack Developer</h4>
+                      <Badge variant="outline" className="text-xs bg-gray-700 border-gray-600 text-gray-300">
                         Present
                       </Badge>
                     </div>
-                    <p className="text-gray-400 text-xs">Leapfrog Technology</p>
-                    <p className="text-gray-500 text-xs mb-1">September 2021 - Present</p>
-                    <p className="text-gray-400 text-sm">Leading front-end development for enterprise applications using React and TypeScript.</p>
+                    <p className="text-gray-400 text-xs">TechNova Solutions</p>
+                    <p className="text-gray-500 text-xs mb-1">January 2022 - Present</p>
+                    <p className="text-gray-400 text-sm">Leading development of enterprise SaaS applications with React, Node.js, and AWS.</p>
                   </div>
                 </div>
                 
@@ -145,17 +146,17 @@ const AboutSection = () => {
                 <div className="relative pl-7">
                   <div className="absolute w-3 h-3 bg-gray-600 rounded-full left-0 top-1.5 z-10"></div>
                   <div>
-                    <h4 className="text-white font-medium">Front-End Developer</h4>
-                    <p className="text-gray-400 text-xs">Alpha Beta Theta Technologies</p>
-                    <p className="text-gray-500 text-xs mb-1">August 2020 - August 2021</p>
-                    <p className="text-gray-400 text-sm">Developed responsive web interfaces and improved application performance.</p>
+                    <h4 className="text-white font-medium">Frontend Developer</h4>
+                    <p className="text-gray-400 text-xs">Digital Innovations Inc.</p>
+                    <p className="text-gray-500 text-xs mb-1">March 2019 - December 2021</p>
+                    <p className="text-gray-400 text-sm">Developed responsive web applications and optimized performance for existing systems.</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Education & Certifications */}
-            <div className="bg-gray-900 p-5 rounded-lg border border-gray-800 shadow-lg">
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700 shadow-lg">
               <h3 className="text-lg font-bold mb-3 text-white flex items-center gap-2">
                 <GraduationCap size={16} className="text-gray-400" />
                 Education
@@ -164,9 +165,9 @@ const AboutSection = () => {
               <div className="relative pl-7">
                 <div className="absolute w-3 h-3 bg-gray-600 rounded-full left-0 top-1.5"></div>
                 <div>
-                  <h4 className="text-white font-medium">B.Sc. Computer Science</h4>
-                  <p className="text-gray-400 text-xs">Tribhuvan University</p>
-                  <p className="text-gray-500 text-xs">2016 - 2020</p>
+                  <h4 className="text-white font-medium">B.S. Computer Science</h4>
+                  <p className="text-gray-400 text-xs">Portland State University</p>
+                  <p className="text-gray-500 text-xs">2015 - 2019</p>
                 </div>
               </div>
             </div>
