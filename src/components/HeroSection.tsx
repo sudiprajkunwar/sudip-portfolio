@@ -14,8 +14,8 @@ const HeroSection = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center py-20"
     >
-      {/* Background with classic gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 z-0"></div>
+      {/* Background with consistent gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-[#1e1433] to-gray-900 z-0"></div>
       
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5 z-0">
@@ -44,7 +44,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center md:justify-start">
               <a
                 href="#about"
-                className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-medium hover:shadow-lg hover:shadow-purple-500/20 transition-all transform hover:-translate-y-1"
+                className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium hover:shadow-lg hover:shadow-purple-500/20 transition-all transform hover:-translate-y-1"
               >
                 About Me
               </a>
@@ -60,7 +60,7 @@ const HeroSection = () => {
             <div className="flex gap-4 justify-center md:justify-start">
               <a 
                 href="https://github.com/sudiprajkunwar" 
-                className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-purple-500/20 hover:border-purple-500/30 transition-all"
+                className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-purple-600/20 hover:border-purple-600/30 transition-all"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -68,7 +68,7 @@ const HeroSection = () => {
               </a>
               <a 
                 href="https://linkedin.com/in/sudiprajkunwar" 
-                className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-purple-500/20 hover:border-purple-500/30 transition-all"
+                className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-purple-600/20 hover:border-purple-600/30 transition-all"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -83,8 +83,8 @@ const HeroSection = () => {
           <div className={`relative transition-all duration-1000 delay-300 ease-out ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}>
-            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-indigo-500/20 rounded-full blur-xl animate-pulse-slow"></div>
-            <div className="relative p-2 bg-gradient-to-tr from-purple-500 to-indigo-500 rounded-full">
+            <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 to-indigo-600/20 rounded-full blur-xl animate-pulse-slow"></div>
+            <div className="relative p-2 bg-gradient-to-tr from-purple-600 to-indigo-600 rounded-full">
               <div className="bg-gray-900 p-2 rounded-full overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1603575448878-868a20723f5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"

@@ -36,7 +36,7 @@ const WebMobileExpertiseSection = () => {
       skills: [
         "React", "TypeScript", "Next.js", "Tailwind CSS", "Redux", "Material UI"
       ],
-      color: "from-purple-500/20 to-purple-700/20 border-purple-500/30"
+      color: "from-purple-600/20 to-purple-800/20 border-purple-600/30"
     },
     {
       title: "Mobile Development",
@@ -45,7 +45,7 @@ const WebMobileExpertiseSection = () => {
       skills: [
         "React Native", "Expo", "Native APIs", "Mobile UI/UX"
       ],
-      color: "from-indigo-500/20 to-indigo-700/20 border-indigo-500/30"
+      color: "from-indigo-600/20 to-indigo-800/20 border-indigo-600/30"
     },
     {
       title: "Backend Engineering",
@@ -54,7 +54,7 @@ const WebMobileExpertiseSection = () => {
       skills: [
         "Node.js", "Express", "NestJs", "RESTful APIs", "GraphQL"
       ],
-      color: "from-purple-500/20 to-purple-700/20 border-purple-500/30"
+      color: "from-purple-600/20 to-purple-800/20 border-purple-600/30"
     },
     {
       title: "Database Design",
@@ -63,7 +63,7 @@ const WebMobileExpertiseSection = () => {
       skills: [
         "MongoDB", "PostgreSQL", "MySQL", "Redis"
       ],
-      color: "from-indigo-500/20 to-indigo-700/20 border-indigo-500/30"
+      color: "from-indigo-600/20 to-indigo-800/20 border-indigo-600/30"
     }
   ];
 
@@ -71,7 +71,7 @@ const WebMobileExpertiseSection = () => {
     <section
       id="expertise"
       ref={sectionRef}
-      className="py-16 relative bg-gradient-to-b from-gray-900 to-purple-950/30"
+      className="py-16 relative bg-gradient-to-b from-[#1a1228] to-[#140d24]"
     >
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMSIvPjwvZz48L3N2Zz4=')] bg-[length:20px_20px] opacity-5"></div>
       
@@ -85,7 +85,7 @@ const WebMobileExpertiseSection = () => {
             Core <span className="text-purple-400">Technologies</span>
           </h2>
           <div 
-            className={`w-24 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 mx-auto mb-4 transition-all duration-1000 delay-200 ease-out ${
+            className={`w-24 h-1 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto mb-4 transition-all duration-1000 delay-200 ease-out ${
               isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
             }`}
           ></div>
