@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { ChevronDown, Github, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { ChevronDown, Github, Linkedin } from "lucide-react";
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,17 +58,21 @@ const HeroSection = () => {
 
             {/* Social links */}
             <div className="flex gap-4 justify-center md:justify-start">
-              <a href="https://github.com/sudiprajkunwar" className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-purple-500/20 hover:border-purple-500/30 transition-all">
+              <a 
+                href="https://github.com/sudiprajkunwar" 
+                className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-purple-500/20 hover:border-purple-500/30 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Github size={20} className="text-white" />
               </a>
-              <a href="https://linkedin.com/in/sudiprajkunwar" className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-purple-500/20 hover:border-purple-500/30 transition-all">
+              <a 
+                href="https://linkedin.com/in/sudiprajkunwar" 
+                className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-purple-500/20 hover:border-purple-500/30 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Linkedin size={20} className="text-white" />
-              </a>
-              <a href="mailto:sudiprajkunwar@gmail.com" className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-purple-500/20 hover:border-purple-500/30 transition-all">
-                <Mail size={20} className="text-white" />
-              </a>
-              <a href="https://sudiprajkunwar.com" className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-purple-500/20 hover:border-purple-500/30 transition-all">
-                <ExternalLink size={20} className="text-white" />
               </a>
             </div>
           </div>

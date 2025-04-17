@@ -1,5 +1,5 @@
 
-import { ArrowUp, Github, Linkedin, Twitter, Instagram, Mail } from "lucide-react";
+import { ArrowUp, Github, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -23,30 +23,20 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://github.com/sudiprajkunwar" 
                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-cyan-500/20 transition-colors"
                 aria-label="Github"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Github className="w-5 h-5 text-white" />
               </a>
               <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-cyan-500/20 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5 text-white" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-cyan-500/20 transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5 text-white" />
-              </a>
-              <a 
-                href="#" 
+                href="https://linkedin.com/in/sudiprajkunwar" 
                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-cyan-500/20 transition-colors"
                 aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Linkedin className="w-5 h-5 text-white" />
               </a>
@@ -66,7 +56,7 @@ const Footer = () => {
                 <a href="#skills" className="text-gray-400 hover:text-cyan-400 transition-colors">Skills</a>
               </li>
               <li>
-                <a href="#projects" className="text-gray-400 hover:text-cyan-400 transition-colors">Projects</a>
+                <a href="#expertise" className="text-gray-400 hover:text-cyan-400 transition-colors">Expertise</a>
               </li>
               <li>
                 <a href="#contact" className="text-gray-400 hover:text-cyan-400 transition-colors">Contact</a>
@@ -79,18 +69,14 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="text-gray-400">
                 <span className="block text-sm">Email:</span>
-                <a href="mailto:your.email@example.com" className="hover:text-cyan-400 transition-colors flex items-center gap-2">
+                <a href="mailto:sudiprajkunwar@gmail.com" className="hover:text-cyan-400 transition-colors flex items-center gap-2">
                   <Mail size={14} />
-                  your.email@example.com
+                  sudiprajkunwar@gmail.com
                 </a>
               </li>
               <li className="text-gray-400">
-                <span className="block text-sm">Phone:</span>
-                <span>+1 (234) 567-890</span>
-              </li>
-              <li className="text-gray-400">
                 <span className="block text-sm">Location:</span>
-                Your City, Country
+                <span>Kathmandu, Nepal</span>
               </li>
             </ul>
           </div>
