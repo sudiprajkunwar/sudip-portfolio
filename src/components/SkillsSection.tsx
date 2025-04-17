@@ -9,18 +9,22 @@ const SkillsSection = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
 
   const skills = [
-    { name: "HTML & CSS", icon: "🌐", color: "bg-pink-500" },
     { name: "JavaScript", icon: "📜", color: "bg-yellow-400" },
     { name: "TypeScript", icon: "🔷", color: "bg-blue-400" },
+    { name: "C++", icon: "⚙️", color: "bg-gray-500" },
+    { name: "HTML5", icon: "🌐", color: "bg-orange-500" },
+    { name: "CSS3", icon: "🎨", color: "bg-blue-500" },
     { name: "React", icon: "⚛️", color: "bg-cyan-400" },
-    { name: "Node.js", icon: "🟢", color: "bg-green-400" },
+    { name: "React Native", icon: "📱", color: "bg-cyan-500" },
+    { name: "Redux", icon: "🔄", color: "bg-purple-500" },
+    { name: "Redux-Saga", icon: "🧵", color: "bg-purple-400" },
+    { name: "Node.js", icon: "🟢", color: "bg-green-500" },
     { name: "Express", icon: "🚂", color: "bg-gray-400" },
+    { name: "NestJS", icon: "🏗️", color: "bg-red-500" },
     { name: "MongoDB", icon: "🍃", color: "bg-green-500" },
     { name: "PostgreSQL", icon: "🐘", color: "bg-blue-500" },
-    { name: "UI/UX Design", icon: "🎨", color: "bg-purple-400" },
-    { name: "Figma", icon: "🖌️", color: "bg-purple-500" },
-    { name: "Tailwind CSS", icon: "🌬️", color: "bg-cyan-500" },
-    { name: "Responsive Design", icon: "📱", color: "bg-indigo-400" }
+    { name: "MySQL", icon: "🐬", color: "bg-blue-600" },
+    { name: "Microsoft SQL", icon: "📊", color: "bg-indigo-500" }
   ];
 
   useEffect(() => {
@@ -58,7 +62,7 @@ const SkillsSection = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            Skills & Expertise
+            Skills & Experience
           </h2>
           <div 
             className={`w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mb-6 transition-all duration-1000 delay-200 ease-out ${
@@ -70,7 +74,7 @@ const SkillsSection = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            Here's an overview of my technical skills and areas of expertise
+            Here's an overview of my technical skills and professional experience
           </p>
         </div>
 
@@ -123,8 +127,38 @@ const SkillsSection = () => {
               <div className="flex flex-wrap gap-2">
                 <Badge variant="outline" className="bg-blue-500/10 border-blue-500/30 text-blue-300">React</Badge>
                 <Badge variant="outline" className="bg-blue-400/10 border-blue-400/30 text-blue-200">TypeScript</Badge>
-                <Badge variant="outline" className="bg-cyan-500/10 border-cyan-500/30 text-cyan-300">Tailwind CSS</Badge>
-                <Badge variant="outline" className="bg-red-500/10 border-red-500/30 text-red-300">Jest</Badge>
+                <Badge variant="outline" className="bg-green-500/10 border-green-500/30 text-green-300">Node.js</Badge>
+                <Badge variant="outline" className="bg-red-500/10 border-red-500/30 text-red-300">NestJS</Badge>
+              </div>
+            </div>
+
+            {/* Project 1 */}
+            <div className="border-l-2 border-indigo-500 pl-6 relative ml-6">
+              <div className="absolute w-3 h-3 bg-indigo-500 rounded-full -left-[6px] top-1.5"></div>
+              <div>
+                <h5 className="text-lg font-medium text-white">Vyaguta</h5>
+                <p className="text-gray-400 text-sm mb-2">Enterprise Resources Planning system for managing employee, project, and resource management</p>
+                <ul className="text-gray-400 mb-3 space-y-1 list-disc list-inside text-xs">
+                  <li>Collaborating with team members to figure out efficient and scalable data models</li>
+                  <li>Configuring and writing base code for the front end and back end of the application</li>
+                  <li>Developing the front end of the application using ReactJs and Typescript</li>
+                  <li>Developing the back end of the application using Express, Nest Js, Mysql, and Postgres</li>
+                </ul>
+              </div>
+            </div>
+            
+            {/* Project 2 */}
+            <div className="border-l-2 border-indigo-500 pl-6 relative ml-6">
+              <div className="absolute w-3 h-3 bg-indigo-500 rounded-full -left-[6px] top-1.5"></div>
+              <div>
+                <h5 className="text-lg font-medium text-white">SuperCare Health</h5>
+                <p className="text-gray-400 text-sm mb-2">Web application for paperless medical record management and patient records maintenance</p>
+                <ul className="text-gray-400 mb-3 space-y-1 list-disc list-inside text-xs">
+                  <li>Collaborate with the team to design scalable data models</li>
+                  <li>Develop the front end using React.js and the back end using Express and MongoDB</li>
+                  <li>Design and create a user-friendly UI</li>
+                  <li>Optimize application performance through research and feature implementation</li>
+                </ul>
               </div>
             </div>
             
@@ -148,15 +182,30 @@ const SkillsSection = () => {
               </ul>
               <div className="flex flex-wrap gap-2">
                 <Badge variant="outline" className="bg-yellow-400/10 border-yellow-400/30 text-yellow-300">JavaScript</Badge>
-                <Badge variant="outline" className="bg-green-500/10 border-green-500/30 text-green-300">Node.js</Badge>
-                <Badge variant="outline" className="bg-green-600/10 border-green-600/30 text-green-400">MongoDB</Badge>
-                <Badge variant="outline" className="bg-indigo-500/10 border-indigo-500/30 text-indigo-300">Express</Badge>
+                <Badge variant="outline" className="bg-cyan-500/10 border-cyan-500/30 text-cyan-300">React</Badge>
+                <Badge variant="outline" className="bg-blue-400/10 border-blue-400/30 text-blue-300">TypeScript</Badge>
+                <Badge variant="outline" className="bg-indigo-500/10 border-indigo-500/30 text-indigo-300">Redux</Badge>
+              </div>
+            </div>
+            
+            {/* Project 3 */}
+            <div className="border-l-2 border-indigo-500 pl-6 relative ml-6">
+              <div className="absolute w-3 h-3 bg-indigo-500 rounded-full -left-[6px] top-1.5"></div>
+              <div>
+                <h5 className="text-lg font-medium text-white">Human Resources Management System</h5>
+                <p className="text-gray-400 text-sm mb-2">System to track clients and candidates with features to update status and send emails</p>
+                <ul className="text-gray-400 mb-3 space-y-1 list-disc list-inside text-xs">
+                  <li>Collaborating with team members to figure out efficient and scalable data models</li>
+                  <li>Configuring and writing base code for the front end of the application</li>
+                  <li>Developing the front end of the application using ReactJs</li>
+                  <li>Maintaining code integrity using Typescript</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Redesigned Education Section */}
+        {/* Education Section */}
         <div 
           className={`mt-16 transition-all duration-1000 delay-800 ease-out ${
             isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
@@ -173,18 +222,18 @@ const SkillsSection = () => {
                 
                 <div className="space-y-3">
                   <h4 className="text-xl font-semibold text-white bg-gradient-to-r from-purple-400 to-white bg-clip-text text-transparent">
-                    Bachelor's in Computer Science
+                    Bachelor's in Computer Science and Information Technology
                   </h4>
                   
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-400">
                     <div className="flex items-center gap-1.5">
                       <BookOpen size={14} className="text-purple-500/80" />
-                      <span>Tribhuvan University</span>
+                      <span>Tribhuvan University, College of Applied Business</span>
                     </div>
                     
                     <div className="flex items-center gap-1.5">
                       <Calendar size={14} className="text-purple-500/80" />
-                      <span>2016 - 2020</span>
+                      <span>2015 - 2020</span>
                     </div>
                     
                     <div className="flex items-center gap-1.5">
@@ -195,8 +244,7 @@ const SkillsSection = () => {
                   
                   <p className="text-gray-300 text-sm">
                     Studied core computer science principles, data structures, algorithms, 
-                    and software engineering practices. Specialized in web technologies and 
-                    distributed systems.
+                    and software engineering practices. Specialized in web development and full-stack technologies.
                   </p>
                   
                   <div className="flex flex-wrap gap-2 pt-2">
@@ -204,10 +252,10 @@ const SkillsSection = () => {
                       Computer Science
                     </Badge>
                     <Badge variant="outline" className="text-xs bg-blue-500/10 border-blue-500/30 text-blue-300">
-                      Software Engineering
+                      Information Technology
                     </Badge>
                     <Badge variant="outline" className="text-xs bg-indigo-500/10 border-indigo-500/30 text-indigo-300">
-                      Algorithms
+                      Software Development
                     </Badge>
                   </div>
                 </div>

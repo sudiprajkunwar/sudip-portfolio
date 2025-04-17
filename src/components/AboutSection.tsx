@@ -65,8 +65,8 @@ const AboutSection = () => {
               />
               
               <div className="mt-4 space-y-3">
-                <h3 className="text-xl font-bold text-white">Prithvi Karki</h3>
-                <p className="text-gray-400 text-sm">Full Stack Developer</p>
+                <h3 className="text-xl font-bold text-white">Sudip Raj Kunwar</h3>
+                <p className="text-gray-400 text-sm">Senior Software Engineer</p>
                 
                 <div className="flex flex-wrap gap-2 pt-2">
                   <Badge variant="outline" className="bg-gray-800 text-gray-300 border-gray-700">React</Badge>
@@ -77,11 +77,11 @@ const AboutSection = () => {
                 <div className="grid grid-cols-2 gap-2 text-sm pt-2">
                   <div className="flex items-center text-gray-300">
                     <Mail size={14} className="text-gray-500 mr-2" />
-                    <span>contact@prithvikarki.com</span>
+                    <span>sudiprajkunwar@gmail.com</span>
                   </div>
                   <div className="flex items-center text-gray-300">
                     <MapPin size={14} className="text-gray-500 mr-2" />
-                    <span>Portland, USA</span>
+                    <span>Kathmandu, Nepal</span>
                   </div>
                 </div>
               </div>
@@ -103,15 +103,15 @@ const AboutSection = () => {
               
               <div className="space-y-3 text-gray-300 text-sm">
                 <p className="leading-relaxed">
-                  Experienced Full Stack Developer with 6+ years of expertise in building and 
-                  scaling web applications. Specialized in React, Node.js, and modern JavaScript 
-                  frameworks with a strong focus on performance optimization and clean code practices.
+                  Skilled Software Engineer with 4+ years of hands-on experience building, optimizing, 
+                  and supporting web-based applications for diverse industry organizations. Passionate about 
+                  implementing and launching new projects.
                 </p>
                 
                 <p className="leading-relaxed">
-                  Passionate about creating intuitive user experiences and solving complex technical 
-                  challenges. Proven track record of delivering high-quality solutions for enterprise clients
-                  across various industries.
+                  Ability to identify core technical problems, find better solutions to existing problems, 
+                  and translate business requirements into technical solutions. Driven individual with the 
+                  ability to adapt to any situation and a proven potential to grow self and others.
                 </p>
               </div>
             </div>
@@ -131,14 +131,14 @@ const AboutSection = () => {
                   <div className="absolute w-3 h-3 bg-white rounded-full left-0 top-1.5 z-10"></div>
                   <div>
                     <div className="flex items-center justify-between">
-                      <h4 className="text-white font-medium">Senior Full Stack Developer</h4>
+                      <h4 className="text-white font-medium">Senior Software Engineer</h4>
                       <Badge variant="outline" className="text-xs bg-gray-700 border-gray-600 text-gray-300">
                         Present
                       </Badge>
                     </div>
-                    <p className="text-gray-400 text-xs">TechNova Solutions</p>
-                    <p className="text-gray-500 text-xs mb-1">January 2022 - Present</p>
-                    <p className="text-gray-400 text-sm">Leading development of enterprise SaaS applications with React, Node.js, and AWS.</p>
+                    <p className="text-gray-400 text-xs">Leapfrog Technology</p>
+                    <p className="text-gray-500 text-xs mb-1">September 2021 - Present</p>
+                    <p className="text-gray-400 text-sm">Working on enterprise applications, designing architectural solutions, and building scalable software with React and Node.js.</p>
                   </div>
                 </div>
                 
@@ -146,10 +146,10 @@ const AboutSection = () => {
                 <div className="relative pl-7">
                   <div className="absolute w-3 h-3 bg-gray-600 rounded-full left-0 top-1.5 z-10"></div>
                   <div>
-                    <h4 className="text-white font-medium">Frontend Developer</h4>
-                    <p className="text-gray-400 text-xs">Digital Innovations Inc.</p>
-                    <p className="text-gray-500 text-xs mb-1">March 2019 - December 2021</p>
-                    <p className="text-gray-400 text-sm">Developed responsive web applications and optimized performance for existing systems.</p>
+                    <h4 className="text-white font-medium">Front-End Developer</h4>
+                    <p className="text-gray-400 text-xs">Alpha Beta Theta Technologies</p>
+                    <p className="text-gray-500 text-xs mb-1">August 2020 - August 2021</p>
+                    <p className="text-gray-400 text-sm">Developed responsive web applications, created reusable components, and implemented new features for existing systems.</p>
                   </div>
                 </div>
               </div>
@@ -165,9 +165,9 @@ const AboutSection = () => {
               <div className="relative pl-7">
                 <div className="absolute w-3 h-3 bg-gray-600 rounded-full left-0 top-1.5"></div>
                 <div>
-                  <h4 className="text-white font-medium">B.S. Computer Science</h4>
-                  <p className="text-gray-400 text-xs">Portland State University</p>
-                  <p className="text-gray-500 text-xs">2015 - 2019</p>
+                  <h4 className="text-white font-medium">B.S. Computer Science and Information Technology</h4>
+                  <p className="text-gray-400 text-xs">Tribhuvan University, College of Applied Business</p>
+                  <p className="text-gray-500 text-xs">2015 - 2020</p>
                 </div>
               </div>
             </div>

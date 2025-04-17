@@ -35,7 +35,7 @@ const HeroSection = () => {
             }`}
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
-              Hello, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Prithvi Karki</span>
+              Hello, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Sudip Raj Kunwar</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl leading-relaxed">
               Senior Software Engineer specializing in full-stack development with React, Node, and modern JavaScript.
@@ -58,16 +58,16 @@ const HeroSection = () => {
 
             {/* Social links */}
             <div className="flex gap-4 justify-center md:justify-start">
-              <a href="https://github.com/prithvikarki" className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-purple-500/20 hover:border-purple-500/30 transition-all">
+              <a href="https://github.com/sudiprajkunwar" className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-purple-500/20 hover:border-purple-500/30 transition-all">
                 <Github size={20} className="text-white" />
               </a>
-              <a href="https://linkedin.com/in/prithvikarki" className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-purple-500/20 hover:border-purple-500/30 transition-all">
+              <a href="https://linkedin.com/in/sudiprajkunwar" className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-purple-500/20 hover:border-purple-500/30 transition-all">
                 <Linkedin size={20} className="text-white" />
               </a>
-              <a href="mailto:contact@prithvikarki.com" className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-purple-500/20 hover:border-purple-500/30 transition-all">
+              <a href="mailto:sudiprajkunwar@gmail.com" className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-purple-500/20 hover:border-purple-500/30 transition-all">
                 <Mail size={20} className="text-white" />
               </a>
-              <a href="https://prithvikarki.com" className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-purple-500/20 hover:border-purple-500/30 transition-all">
+              <a href="https://sudiprajkunwar.com" className="p-2 rounded-full bg-white/5 border border-white/10 hover:bg-purple-500/20 hover:border-purple-500/30 transition-all">
                 <ExternalLink size={20} className="text-white" />
               </a>
             </div>

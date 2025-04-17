@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from "react";
-import { Code, Smartphone, Server, Database, Layers, LayoutGrid } from "lucide-react";
+import { Code, Smartphone, Server, Database } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -89,6 +89,12 @@ const WebMobileExpertiseSection = () => {
               isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
             }`}
           ></div>
+          <p className={`text-gray-300 max-w-2xl mx-auto transition-all duration-1000 delay-300 ease-out ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+          >
+            Specialized in building scalable applications using these key technology areas
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
