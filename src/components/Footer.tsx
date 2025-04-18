@@ -10,7 +10,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative py-12 bg-gradient-to-t from-black to-background border-t border-white/10">
+    <footer className="relative py-12 bg-black border-t border-white/10">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>

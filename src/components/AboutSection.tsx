@@ -31,7 +31,7 @@ const AboutSection = () => {
     <section
       id="about"
       ref={sectionRef}
-      className="py-12 bg-[#1a1228] text-white relative overflow-hidden"
+      className="py-12 bg-gray-900 text-white relative overflow-hidden"
     >
       {/* Background Effect */}
       <div className="absolute inset-0 opacity-5">
@@ -45,9 +45,9 @@ const AboutSection = () => {
           }`}
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-2 text-white">
-            About <span className="text-purple-400">Me</span>
+            About <span className="text-gray-400">Me</span>
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto"></div>
+          <div className="w-16 h-1 bg-gradient-to-r from-white to-gray-500 mx-auto"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
@@ -57,7 +57,7 @@ const AboutSection = () => {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
             }`}
           >
-            <div className="relative rounded-lg overflow-hidden shadow-lg border border-purple-900/50 bg-gray-900/60 p-4">
+            <div className="relative rounded-lg overflow-hidden shadow-lg border border-white/10 bg-black/60 p-4">
               <img
                 src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?auto=format&fit=crop&w=800&q=80"
                 alt="Profile"
@@ -69,18 +69,18 @@ const AboutSection = () => {
                 <p className="text-gray-400 text-sm">Senior Software Engineer</p>
                 
                 <div className="flex flex-wrap gap-2 pt-2">
-                  <Badge variant="outline" className="bg-purple-900/30 text-purple-300 border-purple-700/50">React</Badge>
-                  <Badge variant="outline" className="bg-purple-900/30 text-purple-300 border-purple-700/50">Node.js</Badge>
-                  <Badge variant="outline" className="bg-purple-900/30 text-purple-300 border-purple-700/50">TypeScript</Badge>
+                  <Badge variant="outline" className="bg-black/30 text-white border-white/20">React</Badge>
+                  <Badge variant="outline" className="bg-black/30 text-white border-white/20">Node.js</Badge>
+                  <Badge variant="outline" className="bg-black/30 text-white border-white/20">TypeScript</Badge>
                 </div>
                 
                 <div className="grid grid-cols-2 gap-2 text-sm pt-2">
                   <div className="flex items-center text-gray-300">
-                    <Mail size={14} className="text-purple-400 mr-2" />
+                    <Mail size={14} className="text-white mr-2" />
                     <span>sudiprajkunwar@gmail.com</span>
                   </div>
                   <div className="flex items-center text-gray-300">
-                    <MapPin size={14} className="text-purple-400 mr-2" />
+                    <MapPin size={14} className="text-white mr-2" />
                     <span>Kathmandu, Nepal</span>
                   </div>
                 </div>
@@ -95,9 +95,9 @@ const AboutSection = () => {
             }`}
           >
             {/* Professional Summary */}
-            <div className="bg-gray-900/60 p-5 rounded-lg border border-purple-900/50 shadow-lg">
+            <div className="bg-black/60 p-5 rounded-lg border border-white/10 shadow-lg">
               <h3 className="text-lg font-bold mb-3 text-white flex items-center gap-2">
-                <User size={16} className="text-purple-400" />
+                <User size={16} className="text-white" />
                 Professional Overview
               </h3>
               
@@ -117,22 +117,22 @@ const AboutSection = () => {
             </div>
 
             {/* Experience Timeline */}
-            <div className="bg-gray-900/60 p-5 rounded-lg border border-purple-900/50 shadow-lg">
+            <div className="bg-black/60 p-5 rounded-lg border border-white/10 shadow-lg">
               <h3 className="text-lg font-bold mb-3 text-white flex items-center gap-2">
-                <Briefcase size={16} className="text-purple-400" />
+                <Briefcase size={16} className="text-white" />
                 Experience
               </h3>
               
               <div className="space-y-4 relative">
-                <div className="absolute h-full w-0.5 bg-purple-900/70 left-1.5 top-1.5 z-0"></div>
+                <div className="absolute h-full w-0.5 bg-white/20 left-1.5 top-1.5 z-0"></div>
                 
                 {/* Job 1 */}
                 <div className="relative pl-7">
-                  <div className="absolute w-3 h-3 bg-purple-500 rounded-full left-0 top-1.5 z-10"></div>
+                  <div className="absolute w-3 h-3 bg-white rounded-full left-0 top-1.5 z-10"></div>
                   <div>
                     <div className="flex items-center justify-between">
                       <h4 className="text-white font-medium">Senior Software Engineer</h4>
-                      <Badge variant="outline" className="text-xs bg-purple-900/30 border-purple-700/50 text-purple-300">
+                      <Badge variant="outline" className="text-xs bg-black/50 border-white/20 text-white">
                         Present
                       </Badge>
                     </div>
@@ -144,7 +144,7 @@ const AboutSection = () => {
                 
                 {/* Job 2 */}
                 <div className="relative pl-7">
-                  <div className="absolute w-3 h-3 bg-indigo-500 rounded-full left-0 top-1.5 z-10"></div>
+                  <div className="absolute w-3 h-3 bg-gray-500 rounded-full left-0 top-1.5 z-10"></div>
                   <div>
                     <h4 className="text-white font-medium">Front-End Developer</h4>
                     <p className="text-gray-400 text-xs">Alpha Beta Theta Technologies</p>
@@ -156,14 +156,14 @@ const AboutSection = () => {
             </div>
 
             {/* Education & Certifications */}
-            <div className="bg-gray-900/60 p-5 rounded-lg border border-purple-900/50 shadow-lg">
+            <div className="bg-black/60 p-5 rounded-lg border border-white/10 shadow-lg">
               <h3 className="text-lg font-bold mb-3 text-white flex items-center gap-2">
-                <GraduationCap size={16} className="text-purple-400" />
+                <GraduationCap size={16} className="text-white" />
                 Education
               </h3>
               
               <div className="relative pl-7">
-                <div className="absolute w-3 h-3 bg-indigo-500 rounded-full left-0 top-1.5"></div>
+                <div className="absolute w-3 h-3 bg-gray-500 rounded-full left-0 top-1.5"></div>
                 <div>
                   <h4 className="text-white font-medium">B.S. Computer Science and Information Technology</h4>
                   <p className="text-gray-400 text-xs">Tribhuvan University, College of Applied Business</p>
