@@ -22,30 +22,30 @@ export default {
         sans: ['Inter', 'sans-serif'],
       },
       colors: {
-        border: 'hsl(20 5% 90%)',
-        input: 'hsl(20 5% 90%)',
-        ring: 'hsl(24 9% 27%)',
-        background: 'hsl(40 33% 98%)',
-        foreground: 'hsl(20 14% 4%)',
+        border: 'hsl(0 0% 90%)',
+        input: 'hsl(0 0% 90%)',
+        ring: 'hsl(0 0% 0%)',
+        background: 'hsl(0 0% 100%)',
+        foreground: 'hsl(0 0% 0%)',
         primary: {
-          DEFAULT: 'hsl(24 9% 27%)',
-          foreground: 'hsl(60 9% 98%)'
+          DEFAULT: 'hsl(0 0% 0%)',
+          foreground: 'hsl(0 0% 100%)'
         },
         secondary: {
-          DEFAULT: 'hsl(60 4% 90%)',
-          foreground: 'hsl(24 9% 27%)'
+          DEFAULT: 'hsl(0 0% 96%)',
+          foreground: 'hsl(0 0% 0%)'
         },
         muted: {
-          DEFAULT: 'hsl(60 4% 90%)',
-          foreground: 'hsl(25 5% 45%)'
+          DEFAULT: 'hsl(0 0% 96%)',
+          foreground: 'hsl(0 0% 45%)'
         },
         accent: {
-          DEFAULT: 'hsl(20 5% 90%)',
-          foreground: 'hsl(24 9% 27%)'
+          DEFAULT: 'hsl(0 0% 96%)',
+          foreground: 'hsl(0 0% 0%)'
         },
         destructive: {
           DEFAULT: 'hsl(0 84% 60%)',
-          foreground: 'hsl(60 9% 98%)'
+          foreground: 'hsl(0 0% 100%)'
         }
       },
       borderRadius: {
