@@ -31,39 +31,39 @@ const WebMobileExpertiseSection = () => {
   const expertiseAreas = [
     {
       title: "Frontend Development",
-      icon: <Code className="h-8 w-8 text-white" />,
+      icon: <Code className="h-8 w-8 text-purple-400" />,
       description: "Creating responsive, performant user interfaces with modern frameworks.",
       skills: [
         "React", "TypeScript", "Next.js", "Tailwind CSS", "Redux", "Material UI"
       ],
-      color: "from-white/5 to-white/10 border-white/20"
+      color: "from-purple-500/20 to-purple-700/20 border-purple-500/30"
     },
     {
       title: "Mobile Development",
-      icon: <Smartphone className="h-8 w-8 text-white" />,
+      icon: <Smartphone className="h-8 w-8 text-indigo-400" />,
       description: "Building cross-platform mobile apps with native-like performance.",
       skills: [
         "React Native", "Expo", "Native APIs", "Mobile UI/UX"
       ],
-      color: "from-gray-800/50 to-gray-700/50 border-white/20"
+      color: "from-indigo-500/20 to-indigo-700/20 border-indigo-500/30"
     },
     {
       title: "Backend Engineering",
-      icon: <Server className="h-8 w-8 text-white" />,
+      icon: <Server className="h-8 w-8 text-purple-400" />,
       description: "Developing scalable APIs and server-side applications.",
       skills: [
         "Node.js", "Express", "NestJs", "RESTful APIs", "GraphQL"
       ],
-      color: "from-white/5 to-white/10 border-white/20"
+      color: "from-purple-500/20 to-purple-700/20 border-purple-500/30"
     },
     {
       title: "Database Design",
-      icon: <Database className="h-8 w-8 text-white" />,
+      icon: <Database className="h-8 w-8 text-indigo-400" />,
       description: "Designing efficient database structures for optimal data management.",
       skills: [
         "MongoDB", "PostgreSQL", "MySQL", "Redis"
       ],
-      color: "from-gray-800/50 to-gray-700/50 border-white/20"
+      color: "from-indigo-500/20 to-indigo-700/20 border-indigo-500/30"
     }
   ];
 
@@ -71,7 +71,7 @@ const WebMobileExpertiseSection = () => {
     <section
       id="expertise"
       ref={sectionRef}
-      className="py-16 relative bg-gradient-to-b from-gray-900 to-black"
+      className="py-16 relative bg-gradient-to-b from-gray-900 to-purple-950/30"
     >
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMSIvPjwvZz48L3N2Zz4=')] bg-[length:20px_20px] opacity-5"></div>
       
@@ -82,10 +82,10 @@ const WebMobileExpertiseSection = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            Core <span className="text-gray-400">Technologies</span>
+            Core <span className="text-purple-400">Technologies</span>
           </h2>
           <div 
-            className={`w-24 h-1 bg-gradient-to-r from-white to-gray-500 mx-auto mb-4 transition-all duration-1000 delay-200 ease-out ${
+            className={`w-24 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 mx-auto mb-4 transition-all duration-1000 delay-200 ease-out ${
               isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
             }`}
           ></div>
@@ -109,7 +109,7 @@ const WebMobileExpertiseSection = () => {
               <Card className={`h-full bg-gradient-to-br ${area.color} hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-opacity-30`}>
                 <CardHeader className="pb-2">
                   <div className="flex items-center gap-3 mb-1">
-                    <div className="p-2 rounded-full bg-black">
+                    <div className="p-2 rounded-full bg-white/10">
                       {area.icon}
                     </div>
                     <CardTitle className="text-lg text-white">{area.title}</CardTitle>
@@ -124,7 +124,7 @@ const WebMobileExpertiseSection = () => {
                       <Badge 
                         key={skill} 
                         variant="outline" 
-                        className="bg-black/50 border-white/10 text-gray-300 hover:bg-white/10 text-xs"
+                        className="bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 text-xs"
                       >
                         {skill}
                       </Badge>

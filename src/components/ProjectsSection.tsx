@@ -81,12 +81,12 @@ const ProjectsSection = () => {
     <section
       id="projects"
       ref={sectionRef}
-      className="py-20 md:py-32 relative bg-black"
+      className="py-20 md:py-32 relative bg-gradient-to-b from-background to-black"
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 
-            className={`text-3xl md:text-4xl font-bold mb-4 text-white transition-all duration-1000 ease-out ${
+            className={`text-3xl md:text-4xl font-bold mb-4 text-gradient-purple transition-all duration-1000 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
@@ -105,7 +105,7 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className={`bg-black/40 backdrop-blur-xl border border-white/10 rounded-xl overflow-hidden transition-all duration-1000 ease-out hover:transform hover:-translate-y-2 ${
+              className={`glass-morphism rounded-xl overflow-hidden transition-all duration-1000 ease-out hover:transform hover:-translate-y-2 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
               style={{ transitionDelay: `${index * 200}ms` }}
@@ -114,7 +114,7 @@ const ProjectsSection = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110 grayscale hover:grayscale-0"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-xs flex items-center">
@@ -142,7 +142,7 @@ const ProjectsSection = () => {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center text-gray-300 hover:text-white transition-colors"
+                    className="flex items-center text-gray-300 hover:text-purple-400 transition-colors"
                   >
                     <ExternalLink size={16} className="mr-1" /> Live Demo
                   </a>
@@ -150,7 +150,7 @@ const ProjectsSection = () => {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center text-gray-300 hover:text-white transition-colors"
+                    className="flex items-center text-gray-300 hover:text-purple-400 transition-colors"
                   >
                     <Github size={16} className="mr-1" /> Code
                   </a>
