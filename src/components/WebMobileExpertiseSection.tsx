@@ -71,25 +71,25 @@ const WebMobileExpertiseSection = () => {
     <section
       id="expertise"
       ref={sectionRef}
-      className="py-16 relative bg-white"
+      className="py-16 relative bg-gray-900 text-white"
     >
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMSIvPjwvZz48L3N2Zz4=')] bg-[length:20px_20px] opacity-5"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-10">
           <h2 
-            className={`text-3xl md:text-4xl font-bold mb-4 text-black transition-all duration-1000 ease-out ${
+            className={`text-3xl md:text-4xl font-bold mb-4 text-white transition-all duration-1000 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            Core <span className="text-gray-700">Technologies</span>
+            Core <span className="text-gray-400">Technologies</span>
           </h2>
           <div 
-            className={`w-24 h-1 bg-gradient-to-r from-gray-700 to-gray-500 mx-auto mb-4 transition-all duration-1000 delay-200 ease-out ${
+            className={`w-24 h-1 bg-gradient-to-r from-gray-500 to-gray-300 mx-auto mb-4 transition-all duration-1000 delay-200 ease-out ${
               isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
             }`}
           ></div>
-          <p className={`text-gray-700 max-w-2xl mx-auto transition-all duration-1000 delay-300 ease-out ${
+          <p className={`text-gray-300 max-w-2xl mx-auto transition-all duration-1000 delay-300 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >

@@ -51,26 +51,26 @@ const SkillsSection = () => {
     <section
       id="skills"
       ref={sectionRef}
-      className="py-20 md:py-32 relative bg-white"
+      className="py-20 md:py-32 relative bg-gray-900 text-white"
     >
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMSIvPjwvZz48L3N2Zz4=')] bg-[length:20px_20px] opacity-5"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 
-            className={`text-3xl md:text-5xl font-bold mb-4 text-black transition-all duration-1000 ease-out ${
+            className={`text-3xl md:text-5xl font-bold mb-4 text-white transition-all duration-1000 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
             Skills & Experience
           </h2>
           <div 
-            className={`w-24 h-1 bg-gradient-to-r from-gray-500 to-black mx-auto mb-6 transition-all duration-1000 delay-200 ease-out ${
+            className={`w-24 h-1 bg-gradient-to-r from-gray-500 to-gray-300 mx-auto mb-6 transition-all duration-1000 delay-200 ease-out ${
               isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
             }`}
           ></div>
           <p 
-            className={`text-lg text-gray-700 max-w-3xl mx-auto transition-all duration-1000 delay-300 ease-out ${
+            className={`text-lg text-gray-300 max-w-3xl mx-auto transition-all duration-1000 delay-300 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
@@ -79,7 +79,7 @@ const SkillsSection = () => {
         </div>
 
         <div 
-          className={`glass-morphism p-6 rounded-2xl mb-16 transition-all duration-1000 delay-400 ease-out ${
+          className={`glass-morphism p-6 rounded-2xl mb-16 transition-all duration-1000 delay-400 ease-out bg-gray-800/80 border border-gray-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -87,7 +87,7 @@ const SkillsSection = () => {
             {skills.map((skill, index) => (
               <Badge
                 key={skill.name}
-                className={`text-xs py-0.5 px-2 ${skill.color} text-white bg-opacity-90 border border-opacity-30 hover:bg-opacity-100 transition-all duration-300 hover:-translate-y-1`}
+                className={`text-xs py-0.5 px-2 ${skill.color} text-white bg-opacity-90 border border-gray-600 hover:bg-opacity-100 transition-all duration-300 hover:-translate-y-1`}
                 variant="outline"
               >
                 <span className="text-xs mr-1">{skill.icon}</span>
@@ -98,24 +98,24 @@ const SkillsSection = () => {
         </div>
 
         <div 
-          className={`glass-morphism p-8 rounded-2xl transition-all duration-1000 delay-600 ease-out ${
+          className={`glass-morphism p-8 rounded-2xl transition-all duration-1000 delay-600 ease-out bg-gray-800/80 border border-gray-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h3 className="text-2xl font-bold mb-8 text-black text-center">Professional Experience</h3>
+          <h3 className="text-2xl font-bold mb-8 text-white text-center">Professional Experience</h3>
           
           <div className="space-y-10">
             {/* Company 1 */}
             <div className="border-l-2 border-gray-500 pl-6 relative">
               <div className="absolute w-4 h-4 bg-gray-500 rounded-full -left-[9px] top-1"></div>
               <div className="flex flex-col md:flex-row md:items-center mb-3 gap-2">
-                <h4 className="text-xl font-semibold text-black">Senior Software Engineer</h4>
+                <h4 className="text-xl font-semibold text-white">Senior Software Engineer</h4>
                 <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
-                <span className="text-gray-700 font-medium">Leapfrog Technology</span>
+                <span className="text-gray-300 font-medium">Leapfrog Technology</span>
                 <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
-                <span className="text-gray-600">September 2021 - Present</span>
+                <span className="text-gray-400">September 2021 - Present</span>
               </div>
-              <ul className="text-gray-700 mb-4 space-y-2 list-disc list-inside text-sm">
+              <ul className="text-gray-300 mb-4 space-y-2 list-disc list-inside text-sm">
                 <li>Work with a team of software engineers in the creation of high-quality software within agreed project deadlines</li>
                 <li>Make architectural decisions in collaboration with technology experts</li>
                 <li>Design, build, and maintain efficient, reusable, and reliable software</li>
@@ -125,10 +125,10 @@ const SkillsSection = () => {
                 <li>Refactoring, debugging, testing, and implementing changes to existing applications</li>
               </ul>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="outline" className="bg-gray-700 text-white">React</Badge>
-                <Badge variant="outline" className="bg-gray-600 text-white">TypeScript</Badge>
-                <Badge variant="outline" className="bg-gray-700 text-white">Node.js</Badge>
-                <Badge variant="outline" className="bg-gray-600 text-white">NestJS</Badge>
+                <Badge variant="outline" className="bg-gray-700 text-white border-gray-600">React</Badge>
+                <Badge variant="outline" className="bg-gray-600 text-white border-gray-600">TypeScript</Badge>
+                <Badge variant="outline" className="bg-gray-700 text-white border-gray-600">Node.js</Badge>
+                <Badge variant="outline" className="bg-gray-600 text-white border-gray-600">NestJS</Badge>
               </div>
             </div>
 
@@ -136,9 +136,9 @@ const SkillsSection = () => {
             <div className="border-l-2 border-gray-400 pl-6 relative ml-6">
               <div className="absolute w-3 h-3 bg-gray-400 rounded-full -left-[6px] top-1.5"></div>
               <div>
-                <h5 className="text-lg font-medium text-black">Vyaguta</h5>
-                <p className="text-gray-700 text-sm mb-2">Enterprise Resources Planning system for managing employee, project, and resource management</p>
-                <ul className="text-gray-600 mb-3 space-y-1 list-disc list-inside text-xs">
+                <h5 className="text-lg font-medium text-white">Vyaguta</h5>
+                <p className="text-gray-300 text-sm mb-2">Enterprise Resources Planning system for managing employee, project, and resource management</p>
+                <ul className="text-gray-400 mb-3 space-y-1 list-disc list-inside text-xs">
                   <li>Collaborating with team members to figure out efficient and scalable data models</li>
                   <li>Configuring and writing base code for the front end and back end of the application</li>
                   <li>Developing the front end of the application using ReactJs and Typescript</li>
@@ -151,9 +151,9 @@ const SkillsSection = () => {
             <div className="border-l-2 border-gray-400 pl-6 relative ml-6">
               <div className="absolute w-3 h-3 bg-gray-400 rounded-full -left-[6px] top-1.5"></div>
               <div>
-                <h5 className="text-lg font-medium text-black">SuperCare Health</h5>
-                <p className="text-gray-700 text-sm mb-2">Web application for paperless medical record management and patient records maintenance</p>
-                <ul className="text-gray-600 mb-3 space-y-1 list-disc list-inside text-xs">
+                <h5 className="text-lg font-medium text-white">SuperCare Health</h5>
+                <p className="text-gray-300 text-sm mb-2">Web application for paperless medical record management and patient records maintenance</p>
+                <ul className="text-gray-400 mb-3 space-y-1 list-disc list-inside text-xs">
                   <li>Collaborate with the team to design scalable data models</li>
                   <li>Develop the front end using React.js and the back end using Express and MongoDB</li>
                   <li>Design and create a user-friendly UI</li>
@@ -166,13 +166,13 @@ const SkillsSection = () => {
             <div className="border-l-2 border-gray-500 pl-6 relative">
               <div className="absolute w-4 h-4 bg-gray-500 rounded-full -left-[9px] top-1"></div>
               <div className="flex flex-col md:flex-row md:items-center mb-3 gap-2">
-                <h4 className="text-xl font-semibold text-black">Front-End Developer</h4>
+                <h4 className="text-xl font-semibold text-white">Front-End Developer</h4>
                 <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
-                <span className="text-gray-700 font-medium">Alpha Beta Theta Technologies</span>
+                <span className="text-gray-300 font-medium">Alpha Beta Theta Technologies</span>
                 <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
-                <span className="text-gray-600">August 2020 - August 2021</span>
+                <span className="text-gray-400">August 2020 - August 2021</span>
               </div>
-              <ul className="text-gray-700 mb-4 space-y-2 list-disc list-inside text-sm">
+              <ul className="text-gray-300 mb-4 space-y-2 list-disc list-inside text-sm">
                 <li>Identify core technical problems and collaborate with team members to come up with a robust solution</li>
                 <li>Creating self-contained, reusable components</li>
                 <li>Research and document new technologies and find better solutions to existing problems</li>
@@ -181,10 +181,10 @@ const SkillsSection = () => {
                 <li>Actively participate in improving organizational culture, processes, and standards</li>
               </ul>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="outline" className="bg-gray-700 text-white">JavaScript</Badge>
-                <Badge variant="outline" className="bg-gray-600 text-white">React</Badge>
-                <Badge variant="outline" className="bg-gray-700 text-white">TypeScript</Badge>
-                <Badge variant="outline" className="bg-gray-600 text-white">Redux</Badge>
+                <Badge variant="outline" className="bg-gray-700 text-white border-gray-600">JavaScript</Badge>
+                <Badge variant="outline" className="bg-gray-600 text-white border-gray-600">React</Badge>
+                <Badge variant="outline" className="bg-gray-700 text-white border-gray-600">TypeScript</Badge>
+                <Badge variant="outline" className="bg-gray-600 text-white border-gray-600">Redux</Badge>
               </div>
             </div>
             
@@ -192,9 +192,9 @@ const SkillsSection = () => {
             <div className="border-l-2 border-gray-400 pl-6 relative ml-6">
               <div className="absolute w-3 h-3 bg-gray-400 rounded-full -left-[6px] top-1.5"></div>
               <div>
-                <h5 className="text-lg font-medium text-black">Human Resources Management System</h5>
-                <p className="text-gray-700 text-sm mb-2">System to track clients and candidates with features to update status and send emails</p>
-                <ul className="text-gray-600 mb-3 space-y-1 list-disc list-inside text-xs">
+                <h5 className="text-lg font-medium text-white">Human Resources Management System</h5>
+                <p className="text-gray-300 text-sm mb-2">System to track clients and candidates with features to update status and send emails</p>
+                <ul className="text-gray-400 mb-3 space-y-1 list-disc list-inside text-xs">
                   <li>Collaborating with team members to figure out efficient and scalable data models</li>
                   <li>Configuring and writing base code for the front end of the application</li>
                   <li>Developing the front end of the application using ReactJs</li>
@@ -211,50 +211,50 @@ const SkillsSection = () => {
             isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
           }`}
         >
-          <h3 className="text-2xl font-bold mb-8 text-black text-center">Education</h3>
+          <h3 className="text-2xl font-bold mb-8 text-white text-center">Education</h3>
           
           <div className="max-w-3xl mx-auto">
-            <div className="glass-morphism p-8 rounded-xl border-t-4 border-gray-700 transform transition-all duration-500 hover:scale-[1.02] hover:shadow-gray-300 hover:shadow-lg">
+            <div className="glass-morphism p-8 rounded-xl border-t-4 border-gray-500 bg-gray-800/80 border border-gray-700 transform transition-all duration-500 hover:scale-[1.02] hover:shadow-gray-600 hover:shadow-lg">
               <div className="flex items-start gap-6">
-                <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0">
-                  <GraduationCap size={28} className="text-gray-700" />
+                <div className="w-16 h-16 rounded-full bg-gray-700 flex items-center justify-center flex-shrink-0">
+                  <GraduationCap size={28} className="text-gray-300" />
                 </div>
                 
                 <div className="space-y-3">
-                  <h4 className="text-xl font-semibold text-black">
+                  <h4 className="text-xl font-semibold text-white">
                     Bachelor's in Computer Science and Information Technology
                   </h4>
                   
-                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-600">
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-400">
                     <div className="flex items-center gap-1.5">
-                      <BookOpen size={14} className="text-gray-700" />
+                      <BookOpen size={14} className="text-gray-300" />
                       <span>Tribhuvan University, College of Applied Business</span>
                     </div>
                     
                     <div className="flex items-center gap-1.5">
-                      <Calendar size={14} className="text-gray-700" />
+                      <Calendar size={14} className="text-gray-300" />
                       <span>2015 - 2020</span>
                     </div>
                     
                     <div className="flex items-center gap-1.5">
-                      <MapPin size={14} className="text-gray-700" />
+                      <MapPin size={14} className="text-gray-300" />
                       <span>Kathmandu, Nepal</span>
                     </div>
                   </div>
                   
-                  <p className="text-gray-700 text-sm">
+                  <p className="text-gray-300 text-sm">
                     Studied core computer science principles, data structures, algorithms, 
                     and software engineering practices. Specialized in web development and full-stack technologies.
                   </p>
                   
                   <div className="flex flex-wrap gap-2 pt-2">
-                    <Badge variant="outline" className="text-xs bg-gray-700 text-white">
+                    <Badge variant="outline" className="text-xs bg-gray-700 text-white border-gray-600">
                       Computer Science
                     </Badge>
-                    <Badge variant="outline" className="text-xs bg-gray-600 text-white">
+                    <Badge variant="outline" className="text-xs bg-gray-600 text-white border-gray-600">
                       Information Technology
                     </Badge>
-                    <Badge variant="outline" className="text-xs bg-gray-700 text-white">
+                    <Badge variant="outline" className="text-xs bg-gray-700 text-white border-gray-600">
                       Software Development
                     </Badge>
                   </div>

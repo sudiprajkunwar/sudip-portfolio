@@ -110,7 +110,7 @@ const TechnicalExpertiseSection = () => {
     <section
       id="skills"
       ref={sectionRef}
-      className="py-20 md:py-28 relative bg-white"
+      className="py-20 md:py-28 relative bg-gray-900 text-white"
     >
       {/* Background patterns */}
       <div className="absolute inset-0 opacity-5">
@@ -123,11 +123,11 @@ const TechnicalExpertiseSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-black">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
             Technical Expertise
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-gray-700 to-gray-500 mx-auto"></div>
-          <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-gray-500 to-gray-300 mx-auto"></div>
+          <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
             Specialized in modern web development technologies and frameworks with a focus on creating responsive and performant applications.
           </p>
         </div>
@@ -135,26 +135,26 @@ const TechnicalExpertiseSection = () => {
         <div className={`transition-all duration-1000 delay-300 ease-out ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}>
-          <div className="glass-morphism rounded-3xl overflow-hidden p-8 bg-white/80 border border-gray-200">
+          <div className="glass-morphism rounded-3xl overflow-hidden p-8 bg-gray-800/80 border border-gray-700">
             <Tabs defaultValue="all" className="w-full" onValueChange={setActiveTab}>
               <div className="flex justify-center mb-8">
-                <TabsList className="grid grid-cols-2 md:grid-cols-5 gap-2 bg-gray-100">
-                  <TabsTrigger value="all" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-gray-700 data-[state=active]:to-gray-900 data-[state=active]:text-white text-gray-900">
+                <TabsList className="grid grid-cols-2 md:grid-cols-5 gap-2 bg-gray-700">
+                  <TabsTrigger value="all" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-gray-500 data-[state=active]:to-gray-700 data-[state=active]:text-white text-gray-300">
                     All Skills
                   </TabsTrigger>
-                  <TabsTrigger value="language" className="data-[state=active]:bg-gray-800 data-[state=active]:text-white text-gray-900">
+                  <TabsTrigger value="language" className="data-[state=active]:bg-gray-600 data-[state=active]:text-white text-gray-300">
                     <Code className="mr-2 h-4 w-4" />
                     Languages
                   </TabsTrigger>
-                  <TabsTrigger value="framework" className="data-[state=active]:bg-gray-800 data-[state=active]:text-white text-gray-900">
+                  <TabsTrigger value="framework" className="data-[state=active]:bg-gray-600 data-[state=active]:text-white text-gray-300">
                     <Layers className="mr-2 h-4 w-4" />
                     Frameworks
                   </TabsTrigger>
-                  <TabsTrigger value="database" className="data-[state=active]:bg-gray-800 data-[state=active]:text-white text-gray-900">
+                  <TabsTrigger value="database" className="data-[state=active]:bg-gray-600 data-[state=active]:text-white text-gray-300">
                     <Database className="mr-2 h-4 w-4" />
                     Databases
                   </TabsTrigger>
-                  <TabsTrigger value="tool" className="data-[state=active]:bg-gray-800 data-[state=active]:text-white text-gray-900">
+                  <TabsTrigger value="tool" className="data-[state=active]:bg-gray-600 data-[state=active]:text-white text-gray-300">
                     <Github className="mr-2 h-4 w-4" />
                     Tools
                   </TabsTrigger>
@@ -174,7 +174,7 @@ const TechnicalExpertiseSection = () => {
                       variants={itemVariants}
                       className="relative"
                     >
-                      <div className={`${skill.color} text-white border border-gray-200 rounded-lg p-4 flex flex-col items-center hover:transform hover:-translate-y-1 transition-all duration-300 h-full relative overflow-hidden group`}>
+                      <div className={`${skill.color} text-white border border-gray-600 rounded-lg p-4 flex flex-col items-center hover:transform hover:-translate-y-1 transition-all duration-300 h-full relative overflow-hidden group`}>
                         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div className="z-10 flex flex-col items-center">
                           <span className="font-medium text-white mb-2">{skill.name}</span>
@@ -191,7 +191,7 @@ const TechnicalExpertiseSection = () => {
         <div className={`mt-16 transition-all duration-1000 delay-500 ease-out ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}>
-          <div className="glass-morphism rounded-3xl overflow-hidden p-8 bg-white/80 border border-gray-200">
+          <div className="glass-morphism rounded-3xl overflow-hidden p-8 bg-gray-800/80 border border-gray-700">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="flex flex-col items-center p-6 rounded-xl bg-gray-800 text-white">
                 <Code className="h-12 w-12 text-white mb-4" />
