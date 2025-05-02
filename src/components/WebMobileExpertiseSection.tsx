@@ -36,7 +36,7 @@ const WebMobileExpertiseSection = () => {
       skills: [
         "React", "TypeScript", "Next.js", "Tailwind CSS", "Redux", "Material UI"
       ],
-      color: "from-gray-700 to-gray-900 border-gray-600"
+      color: "from-gray-800 to-gray-900 border-gray-700"
     },
     {
       title: "Mobile Development",
@@ -45,7 +45,7 @@ const WebMobileExpertiseSection = () => {
       skills: [
         "React Native", "Expo", "Native APIs", "Mobile UI/UX"
       ],
-      color: "from-gray-600 to-gray-800 border-gray-500"
+      color: "from-gray-700 to-gray-800 border-gray-600"
     },
     {
       title: "Backend Engineering",
@@ -54,7 +54,7 @@ const WebMobileExpertiseSection = () => {
       skills: [
         "Node.js", "Express", "NestJs", "RESTful APIs", "GraphQL"
       ],
-      color: "from-gray-700 to-gray-900 border-gray-600"
+      color: "from-gray-800 to-gray-900 border-gray-700"
     },
     {
       title: "Database Design",
@@ -63,7 +63,7 @@ const WebMobileExpertiseSection = () => {
       skills: [
         "MongoDB", "PostgreSQL", "MySQL", "Redis"
       ],
-      color: "from-gray-600 to-gray-800 border-gray-500"
+      color: "from-gray-700 to-gray-800 border-gray-600"
     }
   ];
 
@@ -71,21 +71,22 @@ const WebMobileExpertiseSection = () => {
     <section
       id="expertise"
       ref={sectionRef}
-      className="py-16 relative bg-gray-900 text-white"
+      className="py-20 md:py-24 relative bg-gray-900 text-white"
     >
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMSIvPjwvZz48L3N2Zz4=')] bg-[length:20px_20px] opacity-5"></div>
+      {/* Background pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIwOS0xLjc5MS00LTQtNHMtNCAxLjc5MS00IDQgMS43OTEgNCA0IDQgNC0xLjc5MSA0LTR6bTAtMzJjMC0yLjIwOS0xLjc5MS00LTQtNHMtNCAxLjc5MS00IDQgMS43OTEgNCA0IDQgNC0xLjc5MSA0LTR6bTAgNThjMC0yLjIwOS0xLjc5MS00LTQtNHMtNCAxLjc5MS00IDQgMS43OTEgNCA0IDQgNC0xLjc5MSA0LTR6bS0yOC0yYzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00em0wLTI4YzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00em0wLTI4YzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00em01NiA0YzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00em0wIDI4YzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00em0wIDI4YzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00eiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+')] bg-[length:60px_60px] opacity-5"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center mb-10">
+        <div className="text-center mb-12">
           <h2 
             className={`text-3xl md:text-4xl font-bold mb-4 text-white transition-all duration-1000 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            Core <span className="text-gray-400">Technologies</span>
+            Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Technologies</span>
           </h2>
           <div 
-            className={`w-24 h-1 bg-gradient-to-r from-gray-500 to-gray-300 mx-auto mb-4 transition-all duration-1000 delay-200 ease-out ${
+            className={`w-24 h-1 bg-gradient-to-r from-purple-400 to-indigo-400 mx-auto mb-4 transition-all duration-1000 delay-200 ease-out ${
               isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
             }`}
           ></div>
@@ -106,7 +107,7 @@ const WebMobileExpertiseSection = () => {
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <Card className={`h-full bg-gradient-to-br ${area.color} hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-opacity-30 text-white`}>
+              <Card className={`h-full bg-gradient-to-br ${area.color} hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-opacity-30 text-white glass-morphism`}>
                 <CardHeader className="pb-2">
                   <div className="flex items-center gap-3 mb-1">
                     <div className="p-2 rounded-full bg-white/10">

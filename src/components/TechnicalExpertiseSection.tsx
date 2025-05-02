@@ -114,7 +114,7 @@ const TechnicalExpertiseSection = () => {
     >
       {/* Background patterns */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMSIvPjwvZz48L3N2Zz4=')] bg-[length:20px_20px]"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIwOS0xLjc5MS00LTQtNHMtNCAxLjc5MS00IDQgMS43OTEgNCA0IDQgNC0xLjc5MSA0LTR6bTAtMzJjMC0yLjIwOS0xLjc5MS00LTQtNHMtNCAxLjc5MS00IDQgMS43OTEgNCA0IDQgNC0xLjc5MSA0LTR6bTAgNThjMC0yLjIwOS0xLjc5MS00LTQtNHMtNCAxLjc5MS00IDQgMS43OTEgNCA0IDQgNC0xLjc5MSA0LTR6bS0yOC0yYzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00em0wLTI4YzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00em0wLTI4YzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00em01NiA0YzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00em0wIDI4YzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00em0wIDI4YzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00eiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+')] bg-[length:60px_60px]"></div>
       </div>
 
       <div className="container mx-auto px-4 md:px-6">
@@ -124,9 +124,9 @@ const TechnicalExpertiseSection = () => {
           }`}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
-            Technical Expertise
+            Technical <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Expertise</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-gray-500 to-gray-300 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-indigo-400 mx-auto"></div>
           <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
             Specialized in modern web development technologies and frameworks with a focus on creating responsive and performant applications.
           </p>
@@ -139,7 +139,7 @@ const TechnicalExpertiseSection = () => {
             <Tabs defaultValue="all" className="w-full" onValueChange={setActiveTab}>
               <div className="flex justify-center mb-8">
                 <TabsList className="grid grid-cols-2 md:grid-cols-5 gap-2 bg-gray-700">
-                  <TabsTrigger value="all" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-gray-500 data-[state=active]:to-gray-700 data-[state=active]:text-white text-gray-300">
+                  <TabsTrigger value="all" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-500 data-[state=active]:to-indigo-500 data-[state=active]:text-white text-gray-300">
                     All Skills
                   </TabsTrigger>
                   <TabsTrigger value="language" className="data-[state=active]:bg-gray-600 data-[state=active]:text-white text-gray-300">
@@ -175,7 +175,7 @@ const TechnicalExpertiseSection = () => {
                       className="relative"
                     >
                       <div className={`${skill.color} text-white border border-gray-600 rounded-lg p-4 flex flex-col items-center hover:transform hover:-translate-y-1 transition-all duration-300 h-full relative overflow-hidden group`}>
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div className="z-10 flex flex-col items-center">
                           <span className="font-medium text-white mb-2">{skill.name}</span>
                         </div>
@@ -194,25 +194,25 @@ const TechnicalExpertiseSection = () => {
           <div className="glass-morphism rounded-3xl overflow-hidden p-8 bg-gray-800/80 border border-gray-700">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="flex flex-col items-center p-6 rounded-xl bg-gray-800 text-white">
-                <Code className="h-12 w-12 text-white mb-4" />
+                <Code className="h-12 w-12 text-gray-200 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Languages</h3>
                 <p className="text-center text-gray-300">Proficient in JavaScript, TypeScript, HTML5 and CSS3 with solid understanding of C++</p>
               </div>
               
               <div className="flex flex-col items-center p-6 rounded-xl bg-gray-700 text-white">
-                <Layers className="h-12 w-12 text-white mb-4" />
+                <Layers className="h-12 w-12 text-gray-200 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Frameworks</h3>
                 <p className="text-center text-gray-300">Expert in React.js ecosystem including Redux, along with Node.js, Express and NestJS</p>
               </div>
               
               <div className="flex flex-col items-center p-6 rounded-xl bg-gray-800 text-white">
-                <Database className="h-12 w-12 text-white mb-4" />
+                <Database className="h-12 w-12 text-gray-200 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Databases</h3>
                 <p className="text-center text-gray-300">Experience with MySQL, PostgreSQL and Microsoft SQL Server for data management</p>
               </div>
               
               <div className="flex flex-col items-center p-6 rounded-xl bg-gray-700 text-white">
-                <Github className="h-12 w-12 text-white mb-4" />
+                <Github className="h-12 w-12 text-gray-200 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Tools & Methods</h3>
                 <p className="text-center text-gray-300">Adept with Git, GitHub, JIRA and Agile methodologies including Scrum and Kanban</p>
               </div>

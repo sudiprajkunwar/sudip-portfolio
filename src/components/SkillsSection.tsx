@@ -11,20 +11,20 @@ const SkillsSection = () => {
   const skills = [
     { name: "JavaScript", icon: "📜", color: "bg-gray-600" },
     { name: "TypeScript", icon: "🔷", color: "bg-gray-700" },
-    { name: "C++", icon: "⚙️", color: "bg-gray-500" },
-    { name: "HTML5", icon: "🌐", color: "bg-gray-600" },
-    { name: "CSS3", icon: "🎨", color: "bg-gray-700" },
-    { name: "React", icon: "⚛️", color: "bg-gray-500" },
+    { name: "C++", icon: "⚙️", color: "bg-gray-600" },
+    { name: "HTML5", icon: "🌐", color: "bg-gray-700" },
+    { name: "CSS3", icon: "🎨", color: "bg-gray-600" },
+    { name: "React", icon: "⚛️", color: "bg-gray-700" },
     { name: "React Native", icon: "📱", color: "bg-gray-600" },
     { name: "Redux", icon: "🔄", color: "bg-gray-700" },
-    { name: "Redux-Saga", icon: "🧵", color: "bg-gray-500" },
-    { name: "Node.js", icon: "🟢", color: "bg-gray-600" },
-    { name: "Express", icon: "🚂", color: "bg-gray-700" },
-    { name: "NestJS", icon: "🏗️", color: "bg-gray-500" },
+    { name: "Redux-Saga", icon: "🧵", color: "bg-gray-600" },
+    { name: "Node.js", icon: "🟢", color: "bg-gray-700" },
+    { name: "Express", icon: "🚂", color: "bg-gray-600" },
+    { name: "NestJS", icon: "🏗️", color: "bg-gray-700" },
     { name: "MongoDB", icon: "🍃", color: "bg-gray-600" },
     { name: "PostgreSQL", icon: "🐘", color: "bg-gray-700" },
-    { name: "MySQL", icon: "🐬", color: "bg-gray-500" },
-    { name: "Microsoft SQL", icon: "📊", color: "bg-gray-600" }
+    { name: "MySQL", icon: "🐬", color: "bg-gray-600" },
+    { name: "Microsoft SQL", icon: "📊", color: "bg-gray-700" }
   ];
 
   useEffect(() => {
@@ -53,7 +53,8 @@ const SkillsSection = () => {
       ref={sectionRef}
       className="py-20 md:py-32 relative bg-gray-900 text-white"
     >
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMSIvPjwvZz48L3N2Zz4=')] bg-[length:20px_20px] opacity-5"></div>
+      {/* Background pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIwOS0xLjc5MS00LTQtNHMtNCAxLjc5MS00IDQgMS43OTEgNCA0IDQgNC0xLjc5MSA0LTR6bTAtMzJjMC0yLjIwOS0xLjc5MS00LTQtNHMtNCAxLjc5MS00IDQgMS43OTEgNCA0IDQgNC0xLjc5MSA0LTR6bTAgNThjMC0yLjIwOS0xLjc5MS00LTQtNHMtNCAxLjc5MS00IDQgMS43OTEgNCA0IDQgNC0xLjc5MSA0LTR6bS0yOC0yYzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00em0wLTI4YzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00em0wLTI4YzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00em01NiA0YzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00em0wIDI4YzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00em0wIDI4YzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00eiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+')] bg-[length:60px_60px] opacity-5"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16">
@@ -62,10 +63,10 @@ const SkillsSection = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            Skills & Experience
+            Skills & <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Experience</span>
           </h2>
           <div 
-            className={`w-24 h-1 bg-gradient-to-r from-gray-500 to-gray-300 mx-auto mb-6 transition-all duration-1000 delay-200 ease-out ${
+            className={`w-24 h-1 bg-gradient-to-r from-purple-400 to-indigo-400 mx-auto mb-6 transition-all duration-1000 delay-200 ease-out ${
               isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
             }`}
           ></div>
@@ -106,13 +107,13 @@ const SkillsSection = () => {
           
           <div className="space-y-10">
             {/* Company 1 */}
-            <div className="border-l-2 border-gray-500 pl-6 relative">
-              <div className="absolute w-4 h-4 bg-gray-500 rounded-full -left-[9px] top-1"></div>
+            <div className="border-l-2 border-purple-500 pl-6 relative">
+              <div className="absolute w-4 h-4 bg-purple-500 rounded-full -left-[9px] top-1"></div>
               <div className="flex flex-col md:flex-row md:items-center mb-3 gap-2">
                 <h4 className="text-xl font-semibold text-white">Senior Software Engineer</h4>
-                <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
+                <div className="hidden md:block w-2 h-2 bg-purple-400 rounded-full mx-3"></div>
                 <span className="text-gray-300 font-medium">Leapfrog Technology</span>
-                <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
+                <div className="hidden md:block w-2 h-2 bg-purple-400 rounded-full mx-3"></div>
                 <span className="text-gray-400">September 2021 - Present</span>
               </div>
               <ul className="text-gray-300 mb-4 space-y-2 list-disc list-inside text-sm">
@@ -133,8 +134,8 @@ const SkillsSection = () => {
             </div>
 
             {/* Project 1 */}
-            <div className="border-l-2 border-gray-400 pl-6 relative ml-6">
-              <div className="absolute w-3 h-3 bg-gray-400 rounded-full -left-[6px] top-1.5"></div>
+            <div className="border-l-2 border-indigo-400 pl-6 relative ml-6">
+              <div className="absolute w-3 h-3 bg-indigo-400 rounded-full -left-[6px] top-1.5"></div>
               <div>
                 <h5 className="text-lg font-medium text-white">Vyaguta</h5>
                 <p className="text-gray-300 text-sm mb-2">Enterprise Resources Planning system for managing employee, project, and resource management</p>
@@ -148,8 +149,8 @@ const SkillsSection = () => {
             </div>
             
             {/* Project 2 */}
-            <div className="border-l-2 border-gray-400 pl-6 relative ml-6">
-              <div className="absolute w-3 h-3 bg-gray-400 rounded-full -left-[6px] top-1.5"></div>
+            <div className="border-l-2 border-indigo-400 pl-6 relative ml-6">
+              <div className="absolute w-3 h-3 bg-indigo-400 rounded-full -left-[6px] top-1.5"></div>
               <div>
                 <h5 className="text-lg font-medium text-white">SuperCare Health</h5>
                 <p className="text-gray-300 text-sm mb-2">Web application for paperless medical record management and patient records maintenance</p>
@@ -163,13 +164,13 @@ const SkillsSection = () => {
             </div>
             
             {/* Company 2 */}
-            <div className="border-l-2 border-gray-500 pl-6 relative">
-              <div className="absolute w-4 h-4 bg-gray-500 rounded-full -left-[9px] top-1"></div>
+            <div className="border-l-2 border-purple-500 pl-6 relative">
+              <div className="absolute w-4 h-4 bg-purple-500 rounded-full -left-[9px] top-1"></div>
               <div className="flex flex-col md:flex-row md:items-center mb-3 gap-2">
                 <h4 className="text-xl font-semibold text-white">Front-End Developer</h4>
-                <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
+                <div className="hidden md:block w-2 h-2 bg-purple-400 rounded-full mx-3"></div>
                 <span className="text-gray-300 font-medium">Alpha Beta Theta Technologies</span>
-                <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
+                <div className="hidden md:block w-2 h-2 bg-purple-400 rounded-full mx-3"></div>
                 <span className="text-gray-400">August 2020 - August 2021</span>
               </div>
               <ul className="text-gray-300 mb-4 space-y-2 list-disc list-inside text-sm">
@@ -189,8 +190,8 @@ const SkillsSection = () => {
             </div>
             
             {/* Project 3 */}
-            <div className="border-l-2 border-gray-400 pl-6 relative ml-6">
-              <div className="absolute w-3 h-3 bg-gray-400 rounded-full -left-[6px] top-1.5"></div>
+            <div className="border-l-2 border-indigo-400 pl-6 relative ml-6">
+              <div className="absolute w-3 h-3 bg-indigo-400 rounded-full -left-[6px] top-1.5"></div>
               <div>
                 <h5 className="text-lg font-medium text-white">Human Resources Management System</h5>
                 <p className="text-gray-300 text-sm mb-2">System to track clients and candidates with features to update status and send emails</p>
@@ -214,10 +215,10 @@ const SkillsSection = () => {
           <h3 className="text-2xl font-bold mb-8 text-white text-center">Education</h3>
           
           <div className="max-w-3xl mx-auto">
-            <div className="glass-morphism p-8 rounded-xl border-t-4 border-gray-500 bg-gray-800/80 border border-gray-700 transform transition-all duration-500 hover:scale-[1.02] hover:shadow-gray-600 hover:shadow-lg">
+            <div className="glass-morphism p-8 rounded-xl border-t-4 border-purple-500 bg-gray-800/80 border border-gray-700 transform transition-all duration-500 hover:scale-[1.02] hover:shadow-purple-500/20 hover:shadow-lg">
               <div className="flex items-start gap-6">
-                <div className="w-16 h-16 rounded-full bg-gray-700 flex items-center justify-center flex-shrink-0">
-                  <GraduationCap size={28} className="text-gray-300" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center flex-shrink-0">
+                  <GraduationCap size={28} className="text-white" />
                 </div>
                 
                 <div className="space-y-3">
@@ -227,17 +228,17 @@ const SkillsSection = () => {
                   
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-400">
                     <div className="flex items-center gap-1.5">
-                      <BookOpen size={14} className="text-gray-300" />
+                      <BookOpen size={14} className="text-purple-400" />
                       <span>Tribhuvan University, College of Applied Business</span>
                     </div>
                     
                     <div className="flex items-center gap-1.5">
-                      <Calendar size={14} className="text-gray-300" />
+                      <Calendar size={14} className="text-purple-400" />
                       <span>2015 - 2020</span>
                     </div>
                     
                     <div className="flex items-center gap-1.5">
-                      <MapPin size={14} className="text-gray-300" />
+                      <MapPin size={14} className="text-purple-400" />
                       <span>Kathmandu, Nepal</span>
                     </div>
                   </div>
