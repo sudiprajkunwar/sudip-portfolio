@@ -14,49 +14,49 @@ type Skill = {
 
 const skills: Skill[] = [
   // Languages
-  { name: "JavaScript", color: "bg-gray-300", category: 'language' },
-  { name: "TypeScript", color: "bg-gray-400", category: 'language' },
-  { name: "C++", color: "bg-gray-300", category: 'language' },
-  { name: "HTML5", color: "bg-gray-400", category: 'language' },
-  { name: "CSS3", color: "bg-gray-300", category: 'language' },
+  { name: "JavaScript", color: "bg-yellow-400", category: 'language' },
+  { name: "TypeScript", color: "bg-blue-400", category: 'language' },
+  { name: "C++", color: "bg-purple-400", category: 'language' },
+  { name: "HTML5", color: "bg-orange-500", category: 'language' },
+  { name: "CSS3", color: "bg-blue-500", category: 'language' },
   
   // Frameworks & Libraries
-  { name: "ReactJS", color: "bg-gray-300", category: 'framework' },
-  { name: "React Native", color: "bg-gray-400", category: 'framework' },
-  { name: "Redux", color: "bg-gray-300", category: 'framework' },
-  { name: "Redux-Saga", color: "bg-gray-400", category: 'framework' },
-  { name: "Webpack", color: "bg-gray-300", category: 'framework' },
-  { name: "Node.js", color: "bg-gray-400", category: 'framework' },
-  { name: "Express", color: "bg-gray-300", category: 'framework' },
-  { name: "NestJS", color: "bg-gray-400", category: 'framework' },
-  { name: "Bootstrap", color: "bg-gray-300", category: 'framework' },
-  { name: "Material CSS", color: "bg-gray-400", category: 'framework' },
-  { name: "Ant Design", color: "bg-gray-300", category: 'framework' },
-  { name: "Testing", color: "bg-gray-400", category: 'framework' },
+  { name: "ReactJS", color: "bg-cyan-400", category: 'framework' },
+  { name: "React Native", color: "bg-cyan-500", category: 'framework' },
+  { name: "Redux", color: "bg-purple-500", category: 'framework' },
+  { name: "Redux-Saga", color: "bg-purple-400", category: 'framework' },
+  { name: "Webpack", color: "bg-blue-300", category: 'framework' },
+  { name: "Node.js", color: "bg-green-500", category: 'framework' },
+  { name: "Express", color: "bg-gray-500", category: 'framework' },
+  { name: "NestJS", color: "bg-red-500", category: 'framework' },
+  { name: "Bootstrap", color: "bg-purple-600", category: 'framework' },
+  { name: "Material CSS", color: "bg-blue-600", category: 'framework' },
+  { name: "Ant Design", color: "bg-blue-400", category: 'framework' },
+  { name: "Testing", color: "bg-green-400", category: 'framework' },
   
   // Databases
-  { name: "MySQL", color: "bg-gray-300", category: 'database' },
-  { name: "PostgreSQL", color: "bg-gray-400", category: 'database' },
-  { name: "MS SQL Server", color: "bg-gray-300", category: 'database' },
+  { name: "MySQL", color: "bg-blue-600", category: 'database' },
+  { name: "PostgreSQL", color: "bg-blue-500", category: 'database' },
+  { name: "MS SQL Server", color: "bg-indigo-500", category: 'database' },
   
   // Tools
-  { name: "Git", color: "bg-gray-400", category: 'tool' },
-  { name: "GitHub", color: "bg-gray-300", category: 'tool' },
-  { name: "Bitbucket", color: "bg-gray-400", category: 'tool' },
-  { name: "GitLab", color: "bg-gray-300", category: 'tool' },
-  { name: "Trello", color: "bg-gray-400", category: 'tool' },
-  { name: "Slack", color: "bg-gray-300", category: 'tool' },
-  { name: "MS Teams", color: "bg-gray-400", category: 'tool' },
-  { name: "Jira", color: "bg-gray-300", category: 'tool' },
-  { name: "Scrum", color: "bg-gray-400", category: 'tool' },
-  { name: "Kanban", color: "bg-gray-300", category: 'tool' },
+  { name: "Git", color: "bg-orange-600", category: 'tool' },
+  { name: "GitHub", color: "bg-gray-700", category: 'tool' },
+  { name: "Bitbucket", color: "bg-blue-700", category: 'tool' },
+  { name: "GitLab", color: "bg-orange-500", category: 'tool' },
+  { name: "Trello", color: "bg-blue-500", category: 'tool' },
+  { name: "Slack", color: "bg-emerald-500", category: 'tool' },
+  { name: "MS Teams", color: "bg-indigo-600", category: 'tool' },
+  { name: "Jira", color: "bg-blue-600", category: 'tool' },
+  { name: "Scrum", color: "bg-teal-500", category: 'tool' },
+  { name: "Kanban", color: "bg-teal-600", category: 'tool' },
 ];
 
 const iconByCategory = {
-  language: <Code className="h-6 w-6 text-gray-700" />,
-  framework: <Layers className="h-6 w-6 text-gray-700" />,
-  database: <Database className="h-6 w-6 text-gray-700" />,
-  tool: <Github className="h-6 w-6 text-gray-700" />
+  language: <Code className="h-6 w-6 text-purple-400" />,
+  framework: <Layers className="h-6 w-6 text-blue-400" />,
+  database: <Database className="h-6 w-6 text-green-400" />,
+  tool: <Github className="h-6 w-6 text-orange-400" />
 };
 
 const containerVariants = {
@@ -110,7 +110,7 @@ const TechnicalExpertiseSection = () => {
     <section
       id="skills"
       ref={sectionRef}
-      className="py-20 md:py-28 relative bg-white"
+      className="py-20 md:py-28 relative bg-gradient-to-b from-black to-background"
     >
       {/* Background patterns */}
       <div className="absolute inset-0 opacity-5">
@@ -123,11 +123,11 @@ const TechnicalExpertiseSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-black">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gradient-purple">
             Technical Expertise
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-gray-700 to-black mx-auto"></div>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto"></div>
+          <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
             Specialized in modern web development technologies and frameworks with a focus on creating responsive and performant applications.
           </p>
         </div>
@@ -135,26 +135,26 @@ const TechnicalExpertiseSection = () => {
         <div className={`transition-all duration-1000 delay-300 ease-out ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}>
-          <div className="bg-white border border-gray-200 shadow-md rounded-3xl overflow-hidden p-8">
+          <div className="glass-morphism rounded-3xl overflow-hidden p-8">
             <Tabs defaultValue="all" className="w-full" onValueChange={setActiveTab}>
               <div className="flex justify-center mb-8">
                 <TabsList className="grid grid-cols-2 md:grid-cols-5 gap-2">
-                  <TabsTrigger value="all" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-gray-800 data-[state=active]:to-black data-[state=active]:text-white">
+                  <TabsTrigger value="all" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-500 data-[state=active]:to-blue-500 data-[state=active]:text-white">
                     All Skills
                   </TabsTrigger>
-                  <TabsTrigger value="language" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-gray-700 data-[state=active]:to-gray-900 data-[state=active]:text-white">
+                  <TabsTrigger value="language" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:to-purple-400 data-[state=active]:text-white">
                     <Code className="mr-2 h-4 w-4" />
                     Languages
                   </TabsTrigger>
-                  <TabsTrigger value="framework" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-gray-700 data-[state=active]:to-gray-900 data-[state=active]:text-white">
+                  <TabsTrigger value="framework" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-blue-400 data-[state=active]:text-white">
                     <Layers className="mr-2 h-4 w-4" />
                     Frameworks
                   </TabsTrigger>
-                  <TabsTrigger value="database" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-gray-700 data-[state=active]:to-gray-900 data-[state=active]:text-white">
+                  <TabsTrigger value="database" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-green-600 data-[state=active]:to-green-400 data-[state=active]:text-white">
                     <Database className="mr-2 h-4 w-4" />
                     Databases
                   </TabsTrigger>
-                  <TabsTrigger value="tool" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-gray-700 data-[state=active]:to-gray-900 data-[state=active]:text-white">
+                  <TabsTrigger value="tool" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-600 data-[state=active]:to-orange-400 data-[state=active]:text-white">
                     <Github className="mr-2 h-4 w-4" />
                     Tools
                   </TabsTrigger>
@@ -174,10 +174,10 @@ const TechnicalExpertiseSection = () => {
                       variants={itemVariants}
                       className="relative"
                     >
-                      <div className={`${skill.color} bg-opacity-60 border border-gray-300 rounded-lg p-4 flex flex-col items-center hover:transform hover:-translate-y-1 transition-all duration-300 h-full relative overflow-hidden group`}>
-                        <div className="absolute inset-0 bg-gradient-to-br from-gray-100/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className={`${skill.color} bg-opacity-20 border border-opacity-30 rounded-lg p-4 flex flex-col items-center hover:transform hover:-translate-y-1 transition-all duration-300 h-full relative overflow-hidden group`}>
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div className="z-10 flex flex-col items-center">
-                          <span className="font-medium text-gray-800 mb-2">{skill.name}</span>
+                          <span className="font-medium text-white mb-2">{skill.name}</span>
                         </div>
                       </div>
                     </motion.div>
@@ -191,30 +191,30 @@ const TechnicalExpertiseSection = () => {
         <div className={`mt-16 transition-all duration-1000 delay-500 ease-out ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}>
-          <div className="bg-white border border-gray-200 shadow-md rounded-3xl overflow-hidden p-8">
+          <div className="glass-morphism rounded-3xl overflow-hidden p-8">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="flex flex-col items-center p-6 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 border border-gray-300">
-                <Code className="h-12 w-12 text-gray-700 mb-4" />
-                <h3 className="text-xl font-semibold text-black mb-2">Languages</h3>
-                <p className="text-center text-gray-600">Proficient in JavaScript, TypeScript, HTML5 and CSS3 with solid understanding of C++</p>
+              <div className="flex flex-col items-center p-6 rounded-xl bg-gradient-to-br from-purple-500/20 to-purple-700/20 border border-purple-500/30">
+                <Code className="h-12 w-12 text-purple-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Languages</h3>
+                <p className="text-center text-gray-300">Proficient in JavaScript, TypeScript, HTML5 and CSS3 with solid understanding of C++</p>
               </div>
               
-              <div className="flex flex-col items-center p-6 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 border border-gray-300">
-                <Layers className="h-12 w-12 text-gray-700 mb-4" />
-                <h3 className="text-xl font-semibold text-black mb-2">Frameworks</h3>
-                <p className="text-center text-gray-600">Expert in React.js ecosystem including Redux, along with Node.js, Express and NestJS</p>
+              <div className="flex flex-col items-center p-6 rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-700/20 border border-blue-500/30">
+                <Layers className="h-12 w-12 text-blue-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Frameworks</h3>
+                <p className="text-center text-gray-300">Expert in React.js ecosystem including Redux, along with Node.js, Express and NestJS</p>
               </div>
               
-              <div className="flex flex-col items-center p-6 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 border border-gray-300">
-                <Database className="h-12 w-12 text-gray-700 mb-4" />
-                <h3 className="text-xl font-semibold text-black mb-2">Databases</h3>
-                <p className="text-center text-gray-600">Experience with MySQL, PostgreSQL and Microsoft SQL Server for data management</p>
+              <div className="flex flex-col items-center p-6 rounded-xl bg-gradient-to-br from-green-500/20 to-green-700/20 border border-green-500/30">
+                <Database className="h-12 w-12 text-green-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Databases</h3>
+                <p className="text-center text-gray-300">Experience with MySQL, PostgreSQL and Microsoft SQL Server for data management</p>
               </div>
               
-              <div className="flex flex-col items-center p-6 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 border border-gray-300">
-                <Github className="h-12 w-12 text-gray-700 mb-4" />
-                <h3 className="text-xl font-semibold text-black mb-2">Tools & Methods</h3>
-                <p className="text-center text-gray-600">Adept with Git, GitHub, JIRA and Agile methodologies including Scrum and Kanban</p>
+              <div className="flex flex-col items-center p-6 rounded-xl bg-gradient-to-br from-orange-500/20 to-orange-700/20 border border-orange-500/30">
+                <Github className="h-12 w-12 text-orange-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Tools & Methods</h3>
+                <p className="text-center text-gray-300">Adept with Git, GitHub, JIRA and Agile methodologies including Scrum and Kanban</p>
               </div>
             </div>
           </div>

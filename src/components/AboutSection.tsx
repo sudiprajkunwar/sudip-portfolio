@@ -31,7 +31,7 @@ const AboutSection = () => {
     <section
       id="about"
       ref={sectionRef}
-      className="py-12 bg-white text-black relative overflow-hidden"
+      className="py-12 bg-gray-900 text-white relative overflow-hidden"
     >
       {/* Background Effect */}
       <div className="absolute inset-0 opacity-5">
@@ -44,10 +44,10 @@ const AboutSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-black">
-            About <span className="text-gray-600">Me</span>
+          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-white">
+            About <span className="text-gray-400">Me</span>
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-gray-600 to-black mx-auto"></div>
+          <div className="w-16 h-1 bg-gradient-to-r from-gray-600 to-white mx-auto"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
@@ -57,7 +57,7 @@ const AboutSection = () => {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
             }`}
           >
-            <div className="relative rounded-lg overflow-hidden shadow-lg border border-gray-200 bg-white p-4">
+            <div className="relative rounded-lg overflow-hidden shadow-lg border border-gray-800 bg-gray-800 p-4">
               <img
                 src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?auto=format&fit=crop&w=800&q=80"
                 alt="Profile"
@@ -65,21 +65,21 @@ const AboutSection = () => {
               />
               
               <div className="mt-4 space-y-3">
-                <h3 className="text-xl font-bold text-black">Sudip Raj Kunwar</h3>
-                <p className="text-gray-600 text-sm">Senior Software Engineer</p>
+                <h3 className="text-xl font-bold text-white">Sudip Raj Kunwar</h3>
+                <p className="text-gray-400 text-sm">Senior Software Engineer</p>
                 
                 <div className="flex flex-wrap gap-2 pt-2">
-                  <Badge variant="outline" className="bg-gray-100 text-gray-800 border-gray-300">React</Badge>
-                  <Badge variant="outline" className="bg-gray-100 text-gray-800 border-gray-300">Node.js</Badge>
-                  <Badge variant="outline" className="bg-gray-100 text-gray-800 border-gray-300">TypeScript</Badge>
+                  <Badge variant="outline" className="bg-gray-800 text-gray-300 border-gray-700">React</Badge>
+                  <Badge variant="outline" className="bg-gray-800 text-gray-300 border-gray-700">Node.js</Badge>
+                  <Badge variant="outline" className="bg-gray-800 text-gray-300 border-gray-700">TypeScript</Badge>
                 </div>
                 
                 <div className="grid grid-cols-2 gap-2 text-sm pt-2">
-                  <div className="flex items-center text-gray-600">
+                  <div className="flex items-center text-gray-300">
                     <Mail size={14} className="text-gray-500 mr-2" />
                     <span>sudiprajkunwar@gmail.com</span>
                   </div>
-                  <div className="flex items-center text-gray-600">
+                  <div className="flex items-center text-gray-300">
                     <MapPin size={14} className="text-gray-500 mr-2" />
                     <span>Kathmandu, Nepal</span>
                   </div>
@@ -95,13 +95,13 @@ const AboutSection = () => {
             }`}
           >
             {/* Professional Summary */}
-            <div className="bg-white p-5 rounded-lg border border-gray-200 shadow-lg">
-              <h3 className="text-lg font-bold mb-3 text-black flex items-center gap-2">
-                <User size={16} className="text-gray-600" />
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700 shadow-lg">
+              <h3 className="text-lg font-bold mb-3 text-white flex items-center gap-2">
+                <User size={16} className="text-gray-400" />
                 Professional Overview
               </h3>
               
-              <div className="space-y-3 text-gray-700 text-sm">
+              <div className="space-y-3 text-gray-300 text-sm">
                 <p className="leading-relaxed">
                   Skilled Software Engineer with 4+ years of hands-on experience building, optimizing, 
                   and supporting web-based applications for diverse industry organizations. Passionate about 
@@ -109,7 +109,7 @@ const AboutSection = () => {
                 </p>
                 
                 <p className="leading-relaxed">
-                  Ability to identify core technical problems and collaborate with team members to come up with a robust solution, 
+                  Ability to identify core technical problems, find better solutions to existing problems, 
                   and translate business requirements into technical solutions. Driven individual with the 
                   ability to adapt to any situation and a proven potential to grow self and others.
                 </p>
@@ -117,28 +117,28 @@ const AboutSection = () => {
             </div>
 
             {/* Experience Timeline */}
-            <div className="bg-white p-5 rounded-lg border border-gray-200 shadow-lg">
-              <h3 className="text-lg font-bold mb-3 text-black flex items-center gap-2">
-                <Briefcase size={16} className="text-gray-600" />
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700 shadow-lg">
+              <h3 className="text-lg font-bold mb-3 text-white flex items-center gap-2">
+                <Briefcase size={16} className="text-gray-400" />
                 Experience
               </h3>
               
               <div className="space-y-4 relative">
-                <div className="absolute h-full w-0.5 bg-gray-300 left-1.5 top-1.5 z-0"></div>
+                <div className="absolute h-full w-0.5 bg-gray-700 left-1.5 top-1.5 z-0"></div>
                 
                 {/* Job 1 */}
                 <div className="relative pl-7">
-                  <div className="absolute w-3 h-3 bg-black rounded-full left-0 top-1.5 z-10"></div>
+                  <div className="absolute w-3 h-3 bg-white rounded-full left-0 top-1.5 z-10"></div>
                   <div>
                     <div className="flex items-center justify-between">
-                      <h4 className="text-black font-medium">Senior Software Engineer</h4>
-                      <Badge variant="outline" className="text-xs bg-gray-100 border-gray-300 text-gray-700">
+                      <h4 className="text-white font-medium">Senior Software Engineer</h4>
+                      <Badge variant="outline" className="text-xs bg-gray-700 border-gray-600 text-gray-300">
                         Present
                       </Badge>
                     </div>
-                    <p className="text-gray-600 text-xs">Leapfrog Technology</p>
+                    <p className="text-gray-400 text-xs">Leapfrog Technology</p>
                     <p className="text-gray-500 text-xs mb-1">September 2021 - Present</p>
-                    <p className="text-gray-600 text-sm">Working on enterprise applications, designing architectural solutions, and building scalable software with React and Node.js.</p>
+                    <p className="text-gray-400 text-sm">Working on enterprise applications, designing architectural solutions, and building scalable software with React and Node.js.</p>
                   </div>
                 </div>
                 
@@ -146,27 +146,27 @@ const AboutSection = () => {
                 <div className="relative pl-7">
                   <div className="absolute w-3 h-3 bg-gray-600 rounded-full left-0 top-1.5 z-10"></div>
                   <div>
-                    <h4 className="text-black font-medium">Front-End Developer</h4>
-                    <p className="text-gray-600 text-xs">Alpha Beta Theta Technologies</p>
+                    <h4 className="text-white font-medium">Front-End Developer</h4>
+                    <p className="text-gray-400 text-xs">Alpha Beta Theta Technologies</p>
                     <p className="text-gray-500 text-xs mb-1">August 2020 - August 2021</p>
-                    <p className="text-gray-600 text-sm">Developed responsive web applications, created reusable components, and implemented new features for existing systems.</p>
+                    <p className="text-gray-400 text-sm">Developed responsive web applications, created reusable components, and implemented new features for existing systems.</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Education & Certifications */}
-            <div className="bg-white p-5 rounded-lg border border-gray-200 shadow-lg">
-              <h3 className="text-lg font-bold mb-3 text-black flex items-center gap-2">
-                <GraduationCap size={16} className="text-gray-600" />
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700 shadow-lg">
+              <h3 className="text-lg font-bold mb-3 text-white flex items-center gap-2">
+                <GraduationCap size={16} className="text-gray-400" />
                 Education
               </h3>
               
               <div className="relative pl-7">
                 <div className="absolute w-3 h-3 bg-gray-600 rounded-full left-0 top-1.5"></div>
                 <div>
-                  <h4 className="text-black font-medium">B.S. Computer Science and Information Technology</h4>
-                  <p className="text-gray-600 text-xs">Tribhuvan University, College of Applied Business</p>
+                  <h4 className="text-white font-medium">B.S. Computer Science and Information Technology</h4>
+                  <p className="text-gray-400 text-xs">Tribhuvan University, College of Applied Business</p>
                   <p className="text-gray-500 text-xs">2015 - 2020</p>
                 </div>
               </div>

@@ -9,22 +9,22 @@ const SkillsSection = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
 
   const skills = [
-    { name: "JavaScript", icon: "📜", color: "bg-gray-400" },
-    { name: "TypeScript", icon: "🔷", color: "bg-gray-500" },
+    { name: "JavaScript", icon: "📜", color: "bg-yellow-400" },
+    { name: "TypeScript", icon: "🔷", color: "bg-blue-400" },
     { name: "C++", icon: "⚙️", color: "bg-gray-500" },
-    { name: "HTML5", icon: "🌐", color: "bg-gray-400" },
-    { name: "CSS3", icon: "🎨", color: "bg-gray-500" },
-    { name: "React", icon: "⚛️", color: "bg-gray-400" },
-    { name: "React Native", icon: "📱", color: "bg-gray-500" },
-    { name: "Redux", icon: "🔄", color: "bg-gray-400" },
-    { name: "Redux-Saga", icon: "🧵", color: "bg-gray-500" },
-    { name: "Node.js", icon: "🟢", color: "bg-gray-400" },
-    { name: "Express", icon: "🚂", color: "bg-gray-500" },
-    { name: "NestJS", icon: "🏗️", color: "bg-gray-400" },
-    { name: "MongoDB", icon: "🍃", color: "bg-gray-500" },
-    { name: "PostgreSQL", icon: "🐘", color: "bg-gray-400" },
-    { name: "MySQL", icon: "🐬", color: "bg-gray-500" },
-    { name: "Microsoft SQL", icon: "📊", color: "bg-gray-400" }
+    { name: "HTML5", icon: "🌐", color: "bg-orange-500" },
+    { name: "CSS3", icon: "🎨", color: "bg-blue-500" },
+    { name: "React", icon: "⚛️", color: "bg-cyan-400" },
+    { name: "React Native", icon: "📱", color: "bg-cyan-500" },
+    { name: "Redux", icon: "🔄", color: "bg-purple-500" },
+    { name: "Redux-Saga", icon: "🧵", color: "bg-purple-400" },
+    { name: "Node.js", icon: "🟢", color: "bg-green-500" },
+    { name: "Express", icon: "🚂", color: "bg-gray-400" },
+    { name: "NestJS", icon: "🏗️", color: "bg-red-500" },
+    { name: "MongoDB", icon: "🍃", color: "bg-green-500" },
+    { name: "PostgreSQL", icon: "🐘", color: "bg-blue-500" },
+    { name: "MySQL", icon: "🐬", color: "bg-blue-600" },
+    { name: "Microsoft SQL", icon: "📊", color: "bg-indigo-500" }
   ];
 
   useEffect(() => {
@@ -51,26 +51,26 @@ const SkillsSection = () => {
     <section
       id="skills"
       ref={sectionRef}
-      className="py-20 md:py-32 relative bg-white"
+      className="py-20 md:py-32 relative bg-black"
     >
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMSIvPjwvZz48L3N2Zz4=')] bg-[length:20px_20px] opacity-5"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 
-            className={`text-3xl md:text-5xl font-bold mb-4 text-black transition-all duration-1000 ease-out ${
+            className={`text-3xl md:text-5xl font-bold mb-4 text-gradient-purple transition-all duration-1000 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
             Skills & Experience
           </h2>
           <div 
-            className={`w-24 h-1 bg-gradient-to-r from-gray-700 to-black mx-auto mb-6 transition-all duration-1000 delay-200 ease-out ${
+            className={`w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mb-6 transition-all duration-1000 delay-200 ease-out ${
               isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
             }`}
           ></div>
           <p 
-            className={`text-lg text-gray-600 max-w-3xl mx-auto transition-all duration-1000 delay-300 ease-out ${
+            className={`text-lg text-gray-300 max-w-3xl mx-auto transition-all duration-1000 delay-300 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
@@ -79,7 +79,7 @@ const SkillsSection = () => {
         </div>
 
         <div 
-          className={`bg-white border border-gray-200 shadow-md p-6 rounded-2xl mb-16 transition-all duration-1000 delay-400 ease-out ${
+          className={`glass-morphism p-6 rounded-2xl mb-16 transition-all duration-1000 delay-400 ease-out ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -87,7 +87,7 @@ const SkillsSection = () => {
             {skills.map((skill, index) => (
               <Badge
                 key={skill.name}
-                className={`text-xs py-0.5 px-2 ${skill.color} bg-opacity-20 border border-opacity-30 hover:bg-opacity-30 transition-all duration-300 hover:-translate-y-1 text-black`}
+                className={`text-xs py-0.5 px-2 ${skill.color} bg-opacity-20 border border-opacity-30 hover:bg-opacity-30 transition-all duration-300 hover:-translate-y-1`}
                 variant="outline"
               >
                 <span className="text-xs mr-1">{skill.icon}</span>
@@ -98,24 +98,24 @@ const SkillsSection = () => {
         </div>
 
         <div 
-          className={`bg-white border border-gray-200 shadow-md p-8 rounded-2xl transition-all duration-1000 delay-600 ease-out ${
+          className={`glass-morphism p-8 rounded-2xl transition-all duration-1000 delay-600 ease-out ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h3 className="text-2xl font-bold mb-8 text-black text-center">Professional Experience</h3>
+          <h3 className="text-2xl font-bold mb-8 text-white text-center">Professional Experience</h3>
           
           <div className="space-y-10">
             {/* Company 1 */}
-            <div className="border-l-2 border-gray-500 pl-6 relative">
-              <div className="absolute w-4 h-4 bg-black rounded-full -left-[9px] top-1"></div>
+            <div className="border-l-2 border-purple-500 pl-6 relative">
+              <div className="absolute w-4 h-4 bg-purple-500 rounded-full -left-[9px] top-1"></div>
               <div className="flex flex-col md:flex-row md:items-center mb-3 gap-2">
-                <h4 className="text-xl font-semibold text-black">Senior Software Engineer</h4>
+                <h4 className="text-xl font-semibold text-white">Senior Software Engineer</h4>
                 <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
-                <span className="text-black font-medium">Leapfrog Technology</span>
+                <span className="text-purple-400 font-medium">Leapfrog Technology</span>
                 <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
-                <span className="text-gray-500">September 2021 - Present</span>
+                <span className="text-gray-400">September 2021 - Present</span>
               </div>
-              <ul className="text-gray-600 mb-4 space-y-2 list-disc list-inside text-sm">
+              <ul className="text-gray-300 mb-4 space-y-2 list-disc list-inside text-sm">
                 <li>Work with a team of software engineers in the creation of high-quality software within agreed project deadlines</li>
                 <li>Make architectural decisions in collaboration with technology experts</li>
                 <li>Design, build, and maintain efficient, reusable, and reliable software</li>
@@ -125,20 +125,20 @@ const SkillsSection = () => {
                 <li>Refactoring, debugging, testing, and implementing changes to existing applications</li>
               </ul>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="outline" className="bg-gray-100 border-gray-300 text-black">React</Badge>
-                <Badge variant="outline" className="bg-gray-100 border-gray-300 text-black">TypeScript</Badge>
-                <Badge variant="outline" className="bg-gray-100 border-gray-300 text-black">Node.js</Badge>
-                <Badge variant="outline" className="bg-gray-100 border-gray-300 text-black">NestJS</Badge>
+                <Badge variant="outline" className="bg-blue-500/10 border-blue-500/30 text-blue-300">React</Badge>
+                <Badge variant="outline" className="bg-blue-400/10 border-blue-400/30 text-blue-200">TypeScript</Badge>
+                <Badge variant="outline" className="bg-green-500/10 border-green-500/30 text-green-300">Node.js</Badge>
+                <Badge variant="outline" className="bg-red-500/10 border-red-500/30 text-red-300">NestJS</Badge>
               </div>
             </div>
 
             {/* Project 1 */}
-            <div className="border-l-2 border-gray-400 pl-6 relative ml-6">
-              <div className="absolute w-3 h-3 bg-gray-500 rounded-full -left-[6px] top-1.5"></div>
+            <div className="border-l-2 border-indigo-500 pl-6 relative ml-6">
+              <div className="absolute w-3 h-3 bg-indigo-500 rounded-full -left-[6px] top-1.5"></div>
               <div>
-                <h5 className="text-lg font-medium text-black">Vyaguta</h5>
-                <p className="text-gray-600 text-sm mb-2">Enterprise Resources Planning system for managing employee, project, and resource management</p>
-                <ul className="text-gray-600 mb-3 space-y-1 list-disc list-inside text-xs">
+                <h5 className="text-lg font-medium text-white">Vyaguta</h5>
+                <p className="text-gray-400 text-sm mb-2">Enterprise Resources Planning system for managing employee, project, and resource management</p>
+                <ul className="text-gray-400 mb-3 space-y-1 list-disc list-inside text-xs">
                   <li>Collaborating with team members to figure out efficient and scalable data models</li>
                   <li>Configuring and writing base code for the front end and back end of the application</li>
                   <li>Developing the front end of the application using ReactJs and Typescript</li>
@@ -148,12 +148,12 @@ const SkillsSection = () => {
             </div>
             
             {/* Project 2 */}
-            <div className="border-l-2 border-gray-400 pl-6 relative ml-6">
-              <div className="absolute w-3 h-3 bg-gray-500 rounded-full -left-[6px] top-1.5"></div>
+            <div className="border-l-2 border-indigo-500 pl-6 relative ml-6">
+              <div className="absolute w-3 h-3 bg-indigo-500 rounded-full -left-[6px] top-1.5"></div>
               <div>
-                <h5 className="text-lg font-medium text-black">SuperCare Health</h5>
-                <p className="text-gray-600 text-sm mb-2">Web application for paperless medical record management and patient records maintenance</p>
-                <ul className="text-gray-600 mb-3 space-y-1 list-disc list-inside text-xs">
+                <h5 className="text-lg font-medium text-white">SuperCare Health</h5>
+                <p className="text-gray-400 text-sm mb-2">Web application for paperless medical record management and patient records maintenance</p>
+                <ul className="text-gray-400 mb-3 space-y-1 list-disc list-inside text-xs">
                   <li>Collaborate with the team to design scalable data models</li>
                   <li>Develop the front end using React.js and the back end using Express and MongoDB</li>
                   <li>Design and create a user-friendly UI</li>
@@ -163,16 +163,16 @@ const SkillsSection = () => {
             </div>
             
             {/* Company 2 */}
-            <div className="border-l-2 border-gray-500 pl-6 relative">
-              <div className="absolute w-4 h-4 bg-black rounded-full -left-[9px] top-1"></div>
+            <div className="border-l-2 border-blue-500 pl-6 relative">
+              <div className="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-1"></div>
               <div className="flex flex-col md:flex-row md:items-center mb-3 gap-2">
-                <h4 className="text-xl font-semibold text-black">Front-End Developer</h4>
+                <h4 className="text-xl font-semibold text-white">Front-End Developer</h4>
                 <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
-                <span className="text-black font-medium">Alpha Beta Theta Technologies</span>
+                <span className="text-blue-400 font-medium">Alpha Beta Theta Technologies</span>
                 <div className="hidden md:block w-2 h-2 bg-gray-400 rounded-full mx-3"></div>
-                <span className="text-gray-500">August 2020 - August 2021</span>
+                <span className="text-gray-400">August 2020 - August 2021</span>
               </div>
-              <ul className="text-gray-600 mb-4 space-y-2 list-disc list-inside text-sm">
+              <ul className="text-gray-300 mb-4 space-y-2 list-disc list-inside text-sm">
                 <li>Identify core technical problems and collaborate with team members to come up with a robust solution</li>
                 <li>Creating self-contained, reusable components</li>
                 <li>Research and document new technologies and find better solutions to existing problems</li>
@@ -181,20 +181,20 @@ const SkillsSection = () => {
                 <li>Actively participate in improving organizational culture, processes, and standards</li>
               </ul>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="outline" className="bg-gray-100 border-gray-300 text-black">JavaScript</Badge>
-                <Badge variant="outline" className="bg-gray-100 border-gray-300 text-black">React</Badge>
-                <Badge variant="outline" className="bg-gray-100 border-gray-300 text-black">TypeScript</Badge>
-                <Badge variant="outline" className="bg-gray-100 border-gray-300 text-black">Redux</Badge>
+                <Badge variant="outline" className="bg-yellow-400/10 border-yellow-400/30 text-yellow-300">JavaScript</Badge>
+                <Badge variant="outline" className="bg-cyan-500/10 border-cyan-500/30 text-cyan-300">React</Badge>
+                <Badge variant="outline" className="bg-blue-400/10 border-blue-400/30 text-blue-300">TypeScript</Badge>
+                <Badge variant="outline" className="bg-indigo-500/10 border-indigo-500/30 text-indigo-300">Redux</Badge>
               </div>
             </div>
             
             {/* Project 3 */}
-            <div className="border-l-2 border-gray-400 pl-6 relative ml-6">
-              <div className="absolute w-3 h-3 bg-gray-500 rounded-full -left-[6px] top-1.5"></div>
+            <div className="border-l-2 border-indigo-500 pl-6 relative ml-6">
+              <div className="absolute w-3 h-3 bg-indigo-500 rounded-full -left-[6px] top-1.5"></div>
               <div>
-                <h5 className="text-lg font-medium text-black">Human Resources Management System</h5>
-                <p className="text-gray-600 text-sm mb-2">System to track clients and candidates with features to update status and send emails</p>
-                <ul className="text-gray-600 mb-3 space-y-1 list-disc list-inside text-xs">
+                <h5 className="text-lg font-medium text-white">Human Resources Management System</h5>
+                <p className="text-gray-400 text-sm mb-2">System to track clients and candidates with features to update status and send emails</p>
+                <ul className="text-gray-400 mb-3 space-y-1 list-disc list-inside text-xs">
                   <li>Collaborating with team members to figure out efficient and scalable data models</li>
                   <li>Configuring and writing base code for the front end of the application</li>
                   <li>Developing the front end of the application using ReactJs</li>
@@ -211,50 +211,50 @@ const SkillsSection = () => {
             isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
           }`}
         >
-          <h3 className="text-2xl font-bold mb-8 text-black text-center">Education</h3>
+          <h3 className="text-2xl font-bold mb-8 text-white text-center">Education</h3>
           
           <div className="max-w-3xl mx-auto">
-            <div className="bg-white border border-gray-200 shadow-md p-8 rounded-xl border-t-4 border-gray-800 transform transition-all duration-500 hover:scale-[1.02] hover:shadow-lg">
+            <div className="glass-morphism p-8 rounded-xl border-t-4 border-purple-500 transform transition-all duration-500 hover:scale-[1.02] hover:shadow-purple-500/20 hover:shadow-lg">
               <div className="flex items-start gap-6">
-                <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
-                  <GraduationCap size={28} className="text-gray-700" />
+                <div className="w-16 h-16 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                  <GraduationCap size={28} className="text-purple-400" />
                 </div>
                 
                 <div className="space-y-3">
-                  <h4 className="text-xl font-semibold text-black">
+                  <h4 className="text-xl font-semibold text-white bg-gradient-to-r from-purple-400 to-white bg-clip-text text-transparent">
                     Bachelor's in Computer Science and Information Technology
                   </h4>
                   
-                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-600">
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-400">
                     <div className="flex items-center gap-1.5">
-                      <BookOpen size={14} className="text-gray-700" />
+                      <BookOpen size={14} className="text-purple-500/80" />
                       <span>Tribhuvan University, College of Applied Business</span>
                     </div>
                     
                     <div className="flex items-center gap-1.5">
-                      <Calendar size={14} className="text-gray-700" />
+                      <Calendar size={14} className="text-purple-500/80" />
                       <span>2015 - 2020</span>
                     </div>
                     
                     <div className="flex items-center gap-1.5">
-                      <MapPin size={14} className="text-gray-700" />
+                      <MapPin size={14} className="text-purple-500/80" />
                       <span>Kathmandu, Nepal</span>
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-300 text-sm">
                     Studied core computer science principles, data structures, algorithms, 
                     and software engineering practices. Specialized in web development and full-stack technologies.
                   </p>
                   
                   <div className="flex flex-wrap gap-2 pt-2">
-                    <Badge variant="outline" className="text-xs bg-gray-100 border-gray-300 text-black">
+                    <Badge variant="outline" className="text-xs bg-purple-500/10 border-purple-500/30 text-purple-300">
                       Computer Science
                     </Badge>
-                    <Badge variant="outline" className="text-xs bg-gray-100 border-gray-300 text-black">
+                    <Badge variant="outline" className="text-xs bg-blue-500/10 border-blue-500/30 text-blue-300">
                       Information Technology
                     </Badge>
-                    <Badge variant="outline" className="text-xs bg-gray-100 border-gray-300 text-black">
+                    <Badge variant="outline" className="text-xs bg-indigo-500/10 border-indigo-500/30 text-indigo-300">
                       Software Development
                     </Badge>
                   </div>
