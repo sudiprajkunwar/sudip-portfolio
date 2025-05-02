@@ -9,6 +9,13 @@ const Footer = () => {
     });
   };
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="relative py-12 bg-gradient-to-t from-black to-gray-900 border-t border-white/10">
       <div className="container mx-auto px-4 md:px-6">
@@ -47,19 +54,44 @@ const Footer = () => {
             <h3 className="text-lg font-bold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-gray-400 hover:text-cyan-400 transition-colors">Home</a>
+                <button 
+                  onClick={() => scrollToSection('home')} 
+                  className="text-gray-400 hover:text-cyan-400 transition-colors cursor-pointer"
+                >
+                  Home
+                </button>
               </li>
               <li>
-                <a href="#about" className="text-gray-400 hover:text-cyan-400 transition-colors">About</a>
+                <button 
+                  onClick={() => scrollToSection('about')} 
+                  className="text-gray-400 hover:text-cyan-400 transition-colors cursor-pointer"
+                >
+                  About
+                </button>
               </li>
               <li>
-                <a href="#skills" className="text-gray-400 hover:text-cyan-400 transition-colors">Skills</a>
+                <button 
+                  onClick={() => scrollToSection('skills')} 
+                  className="text-gray-400 hover:text-cyan-400 transition-colors cursor-pointer"
+                >
+                  Skills
+                </button>
               </li>
               <li>
-                <a href="#expertise" className="text-gray-400 hover:text-cyan-400 transition-colors">Expertise</a>
+                <button 
+                  onClick={() => scrollToSection('expertise')} 
+                  className="text-gray-400 hover:text-cyan-400 transition-colors cursor-pointer"
+                >
+                  Expertise
+                </button>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-cyan-400 transition-colors">Contact</a>
+                <button 
+                  onClick={() => scrollToSection('contact')} 
+                  className="text-gray-400 hover:text-cyan-400 transition-colors cursor-pointer"
+                >
+                  Contact
+                </button>
               </li>
             </ul>
           </div>
