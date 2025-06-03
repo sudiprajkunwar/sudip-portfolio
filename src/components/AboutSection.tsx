@@ -74,13 +74,13 @@ const AboutSection = () => {
                   <Badge variant="outline" className="bg-gray-800 text-gray-300 border-gray-700">TypeScript</Badge>
                 </div>
                 
-                <div className="grid grid-cols-2 gap-2 text-sm pt-2">
+                <div className="space-y-2 text-sm pt-2">
                   <div className="flex items-center text-gray-300">
-                    <Mail size={14} className="text-gray-500 mr-2" />
-                    <span>sudiprajkunwar@gmail.com</span>
+                    <Mail size={14} className="text-gray-500 mr-2 flex-shrink-0" />
+                    <span className="break-all">sudiprajkunwar@gmail.com</span>
                   </div>
                   <div className="flex items-center text-gray-300">
-                    <MapPin size={14} className="text-gray-500 mr-2" />
+                    <MapPin size={14} className="text-gray-500 mr-2 flex-shrink-0" />
                     <span>Kathmandu, Nepal</span>
                   </div>
                 </div>
