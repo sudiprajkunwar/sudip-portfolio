@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from "react";
-import { Code, Smartphone, Server, Database } from "lucide-react";
+import { Code, Smartphone, Database, Layers } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -30,11 +30,11 @@ const WebMobileExpertiseSection = () => {
 
   const expertiseAreas = [
     {
-      title: "Frontend Development",
+      title: "Full Stack Development",
       icon: <Code className="h-8 w-8 text-gray-100" />,
-      description: "Creating responsive, performant user interfaces with modern frameworks.",
+      description: "End-to-end web application development from UI to server-side logic.",
       skills: [
-        "React", "TypeScript", "Next.js", "Tailwind CSS", "Redux", "Material UI"
+        "React", "TypeScript", "Node.js", "Express", "NestJs", "Redux", "Next.js", "REST APIs", "GraphQL"
       ],
       color: "from-gray-800 to-gray-900 border-gray-700"
     },
@@ -48,20 +48,20 @@ const WebMobileExpertiseSection = () => {
       color: "from-gray-700 to-gray-800 border-gray-600"
     },
     {
-      title: "Backend Engineering",
-      icon: <Server className="h-8 w-8 text-gray-100" />,
-      description: "Developing scalable APIs and server-side applications.",
-      skills: [
-        "Node.js", "Express", "NestJs", "RESTful APIs", "GraphQL"
-      ],
-      color: "from-gray-800 to-gray-900 border-gray-700"
-    },
-    {
       title: "Database Design",
       icon: <Database className="h-8 w-8 text-gray-100" />,
       description: "Designing efficient database structures for optimal data management.",
       skills: [
         "MongoDB", "PostgreSQL", "MySQL", "Redis"
+      ],
+      color: "from-gray-800 to-gray-900 border-gray-700"
+    },
+    {
+      title: "System Design & Architecture",
+      icon: <Layers className="h-8 w-8 text-gray-100" />,
+      description: "Designing scalable, maintainable software architectures and systems.",
+      skills: [
+        "Microservices", "API Design", "Scalability", "Performance", "Security", "Cloud Architecture"
       ],
       color: "from-gray-700 to-gray-800 border-gray-600"
     }
