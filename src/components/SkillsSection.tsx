@@ -132,36 +132,6 @@ const SkillsSection = () => {
                 <Badge variant="outline" className="bg-gray-600 text-white border-gray-600">NestJS</Badge>
               </div>
             </div>
-
-            {/* Project 1 */}
-            <div className="border-l-2 border-indigo-400 pl-6 relative ml-6">
-              <div className="absolute w-3 h-3 bg-indigo-400 rounded-full -left-[6px] top-1.5"></div>
-              <div>
-                <h5 className="text-lg font-medium text-white">Vyaguta</h5>
-                <p className="text-gray-300 text-sm mb-2">Enterprise Resources Planning system for managing employee, project, and resource management</p>
-                <ul className="text-gray-400 mb-3 space-y-1 list-disc list-inside text-xs">
-                  <li>Collaborating with team members to figure out efficient and scalable data models</li>
-                  <li>Configuring and writing base code for the front end and back end of the application</li>
-                  <li>Developing the front end of the application using ReactJs and Typescript</li>
-                  <li>Developing the back end of the application using Express, Nest Js, Mysql, and Postgres</li>
-                </ul>
-              </div>
-            </div>
-            
-            {/* Project 2 */}
-            <div className="border-l-2 border-indigo-400 pl-6 relative ml-6">
-              <div className="absolute w-3 h-3 bg-indigo-400 rounded-full -left-[6px] top-1.5"></div>
-              <div>
-                <h5 className="text-lg font-medium text-white">SuperCare Health</h5>
-                <p className="text-gray-300 text-sm mb-2">Web application for paperless medical record management and patient records maintenance</p>
-                <ul className="text-gray-400 mb-3 space-y-1 list-disc list-inside text-xs">
-                  <li>Collaborate with the team to design scalable data models</li>
-                  <li>Develop the front end using React.js and the back end using Express and MongoDB</li>
-                  <li>Design and create a user-friendly UI</li>
-                  <li>Optimize application performance through research and feature implementation</li>
-                </ul>
-              </div>
-            </div>
             
             {/* Company 2 */}
             <div className="border-l-2 border-purple-500 pl-6 relative">
@@ -186,21 +156,6 @@ const SkillsSection = () => {
                 <Badge variant="outline" className="bg-gray-600 text-white border-gray-600">React</Badge>
                 <Badge variant="outline" className="bg-gray-700 text-white border-gray-600">TypeScript</Badge>
                 <Badge variant="outline" className="bg-gray-600 text-white border-gray-600">Redux</Badge>
-              </div>
-            </div>
-            
-            {/* Project 3 */}
-            <div className="border-l-2 border-indigo-400 pl-6 relative ml-6">
-              <div className="absolute w-3 h-3 bg-indigo-400 rounded-full -left-[6px] top-1.5"></div>
-              <div>
-                <h5 className="text-lg font-medium text-white">Human Resources Management System</h5>
-                <p className="text-gray-300 text-sm mb-2">System to track clients and candidates with features to update status and send emails</p>
-                <ul className="text-gray-400 mb-3 space-y-1 list-disc list-inside text-xs">
-                  <li>Collaborating with team members to figure out efficient and scalable data models</li>
-                  <li>Configuring and writing base code for the front end of the application</li>
-                  <li>Developing the front end of the application using ReactJs</li>
-                  <li>Maintaining code integrity using Typescript</li>
-                </ul>
               </div>
             </div>
           </div>
