@@ -51,12 +51,13 @@ const AboutSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
-          {/* Left Column - Image */}
+          {/* Left Column - Image and Education */}
           <div 
-            className={`md:col-span-5 transition-all duration-1000 delay-200 ease-out ${
+            className={`md:col-span-5 space-y-6 transition-all duration-1000 delay-200 ease-out ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
             }`}
           >
+            {/* Profile Card */}
             <div className="relative rounded-lg overflow-hidden shadow-lg border border-gray-800 bg-gray-800 p-4">
               <img
                 src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?auto=format&fit=crop&w=800&q=80"
@@ -75,9 +76,9 @@ const AboutSection = () => {
                 </div>
                 
                 <div className="space-y-2 text-sm pt-2">
-                  <div className="flex items-center text-gray-300">
-                    <Mail size={14} className="text-gray-500 mr-2 flex-shrink-0" />
-                    <span className="break-all">sudiprajkunwar@gmail.com</span>
+                  <div className="flex items-start text-gray-300">
+                    <Mail size={14} className="text-gray-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span className="break-all leading-tight">sudiprajkunwar@gmail.com</span>
                   </div>
                   <div className="flex items-center text-gray-300">
                     <MapPin size={14} className="text-gray-500 mr-2 flex-shrink-0" />
@@ -86,9 +87,26 @@ const AboutSection = () => {
                 </div>
               </div>
             </div>
+
+            {/* Education Card */}
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700 shadow-lg">
+              <h3 className="text-lg font-bold mb-3 text-white flex items-center gap-2">
+                <GraduationCap size={16} className="text-gray-400" />
+                Education
+              </h3>
+              
+              <div className="relative pl-7">
+                <div className="absolute w-3 h-3 bg-gray-600 rounded-full left-0 top-1.5"></div>
+                <div>
+                  <h4 className="text-white font-medium">B.S. Computer Science and Information Technology</h4>
+                  <p className="text-gray-400 text-xs">Tribhuvan University, College of Applied Business</p>
+                  <p className="text-gray-500 text-xs">2015 - 2020</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Right Column - Professional Summary */}
+          {/* Right Column - Professional Summary and Experience */}
           <div 
             className={`md:col-span-7 space-y-4 transition-all duration-1000 delay-400 ease-out ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
@@ -151,23 +169,6 @@ const AboutSection = () => {
                     <p className="text-gray-500 text-xs mb-1">August 2020 - August 2021</p>
                     <p className="text-gray-400 text-sm">Developed responsive web applications, created reusable components, and implemented new features for existing systems.</p>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Education & Certifications */}
-            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700 shadow-lg">
-              <h3 className="text-lg font-bold mb-3 text-white flex items-center gap-2">
-                <GraduationCap size={16} className="text-gray-400" />
-                Education
-              </h3>
-              
-              <div className="relative pl-7">
-                <div className="absolute w-3 h-3 bg-gray-600 rounded-full left-0 top-1.5"></div>
-                <div>
-                  <h4 className="text-white font-medium">B.S. Computer Science and Information Technology</h4>
-                  <p className="text-gray-400 text-xs">Tribhuvan University, College of Applied Business</p>
-                  <p className="text-gray-500 text-xs">2015 - 2020</p>
                 </div>
               </div>
             </div>
