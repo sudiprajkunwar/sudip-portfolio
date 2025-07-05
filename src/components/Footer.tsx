@@ -77,7 +77,7 @@ const Footer = () => {
 
           <div>
             <h3 className="text-lg font-bold text-white mb-4">Socials</h3>
-            <ul className="flex gap-2">
+            <ul className="flex gap-4">
               <li className="text-gray-400">
                 <a
                   target="_blank"
@@ -86,7 +86,7 @@ const Footer = () => {
                   href="https://github.com/sudiprajkunwar"
                   className="hover:text-cyan-400 transition-colors flex items-center gap-2"
                 >
-                  <Github size={16} className="text-white" />
+                  <Github size={18} className="text-white" />
                 </a>
               </li>
 
@@ -98,7 +98,7 @@ const Footer = () => {
                   href="https://linkedin.com/in/sudiprajkunwar"
                   className="hover:text-cyan-400 transition-colors flex items-center gap-2"
                 >
-                  <Linkedin size={16} className="text-white" />
+                  <Linkedin size={18} className="text-white" />
                 </a>
               </li>
 
@@ -110,7 +110,7 @@ const Footer = () => {
                   href="https://www.instagram.com/sudiprajkunwar"
                   className="hover:text-cyan-400 transition-colors flex items-center gap-2"
                 >
-                  <Instagram size={16} className="text-white" />
+                  <Instagram size={18} className="text-white" />
                 </a>
               </li>
             </ul>

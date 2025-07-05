@@ -72,7 +72,7 @@ const AboutSection = () => {
             {/* Profile Card */}
             <div className="relative rounded-lg overflow-hidden shadow-lg border border-gray-800 bg-gray-800 p-4">
               <img
-                src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?auto=format&fit=crop&w=800&q=80"
+                src="https://avatars.githubusercontent.com/u/52486716?v=4"
                 alt="Profile"
                 className="w-full h-auto grayscale rounded-lg shadow-md transition-transform duration-700 hover:grayscale-0"
               />

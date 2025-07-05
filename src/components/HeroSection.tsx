@@ -101,10 +101,10 @@ const HeroSection = () => {
             }`}
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-indigo-500/20 rounded-full blur-xl animate-pulse-slow"></div>
-            <div className="relative p-2 bg-gradient-to-tr from-purple-500 to-indigo-500 rounded-full">
-              <div className="bg-gray-900 p-2 rounded-full overflow-hidden">
+            <div className="relative p-1 bg-gradient-to-tr from-purple-500 to-indigo-500 rounded-full">
+              <div className="bg-gray-900 p-1 rounded-full overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1603575448878-868a20723f5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                  src="https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Developer Profile"
                   className="w-full h-full object-cover rounded-full"
                 />
