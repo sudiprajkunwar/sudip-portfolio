@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
@@ -40,10 +39,10 @@
   * {
     @apply border-border selection:bg-purple-500/20 selection:text-white;
   }
-  
+
   body {
     @apply bg-background text-foreground antialiased overflow-x-hidden;
-    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+    font-feature-settings: 'ss01', 'ss02', 'cv01', 'cv02', 'cv03';
   }
 
   html {
@@ -56,7 +55,7 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  
+
   .scrollbar-none::-webkit-scrollbar {
     display: none;
   }
@@ -64,15 +63,15 @@
   .glass-morphism {
     @apply backdrop-blur-xl bg-white/5 border border-white/10 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.3)];
   }
-  
+
   .neo-blur {
     @apply backdrop-blur-2xl bg-black/40 border border-white/10;
   }
-  
+
   .text-gradient {
     @apply bg-gradient-to-br from-white via-white/90 to-white/70 bg-clip-text text-transparent;
   }
-  
+
   .text-gradient-gray {
     @apply bg-gradient-to-r from-gray-400 to-white bg-clip-text text-transparent;
   }
@@ -80,23 +79,23 @@
   .text-gradient-purple {
     @apply bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent;
   }
-  
+
   .animate-delay-200 {
     animation-delay: 200ms;
   }
-  
+
   .animate-delay-400 {
     animation-delay: 400ms;
   }
-  
+
   .animate-delay-600 {
     animation-delay: 600ms;
   }
-  
+
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
-  
+
   .hide-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
