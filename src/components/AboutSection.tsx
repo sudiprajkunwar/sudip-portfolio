@@ -157,7 +157,7 @@ const AboutSection = () => {
 
               <div className="space-y-3 text-gray-300 text-sm">
                 <p className="leading-relaxed">
-                  Skilled Software Engineer with 4+ years of hands-on experience
+                  Skilled Software Engineer with 5+ years of hands-on experience
                   building, optimizing, and supporting web-based applications
                   for diverse industry organizations. Passionate about
                   implementing and launching new projects.
