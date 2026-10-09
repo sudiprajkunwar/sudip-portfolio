@@ -8,7 +8,7 @@ const AboutSection = () => (
       <SectionHeading number="02" label="Behind the code" title="Engineer. Collaborator. Problem solver" />
       <div className="grid gap-10 md:grid-cols-[280px_1fr] lg:gap-20">
         <div>
-          <div className="relative aspect-[5/4] overflow-hidden rounded-md border border-border"><img src={profileUrl} alt="Sudip Raj Kunwar" className="h-full w-full object-cover grayscale" loading="lazy" /></div>
+          <div className="relative aspect-[5/4] overflow-hidden rounded-md border border-border"><img src={profileUrl} alt="Sudip Raj Kunwar" className="h-full w-full object-cover" loading="lazy" /></div>
           <div className="mt-6 flex items-center gap-2 text-xs text-muted-foreground"><MapPin size={14} /> Kathmandu, Nepal</div>
           <a href="mailto:sudip.kunwar9898@gmail.com" className="mt-3 flex items-start gap-2 text-xs text-muted-foreground hover:text-foreground"><Mail size={14} className="shrink-0" /><span className="break-all">sudip.kunwar9898@gmail.com</span></a>
           <div className="mt-7 border-t border-border pt-6">
