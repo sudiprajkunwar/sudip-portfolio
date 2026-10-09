@@ -1,116 +1,35 @@
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { ArrowUpRight, Menu, Terminal, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { navigation } from '@/lib/portfolio';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
-
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState('home');
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-
-      // Determine active section based on scroll position
-      const sections = ['home', 'about', 'skills', 'expertise', 'contact'];
-      const scrollPosition = window.scrollY + 100;
-
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetHeight = element.offsetHeight;
-
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
+    const update = () => {
+      const match = [...navigation].reverse().find(({ id }) => {
+        const section = document.getElementById(id);
+        return section && section.getBoundingClientRect().top <= 180;
+      });
+      setActive(match?.id ?? 'home');
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    return () => window.removeEventListener('scroll', update);
   }, []);
-
-  const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Expertise', href: '#expertise' },
-  ];
-
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'py-3 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800'
-          : 'py-5 bg-transparent'
-      }`}
-    >
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          <a href="#" className="text-xl md:text-2xl font-bold text-white">
-            <span className="text-purple-400">Sudip</span>Raj
-          </a>
-
-          {/* Desktop Navigation */}
-          <ul className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <li key={item.name}>
-                <a
-                  href={item.href}
-                  className={`text-sm font-medium transition-colors relative px-2 py-1 ${
-                    activeSection === item.href.substring(1)
-                      ? 'text-purple-400 after:w-full'
-                      : 'text-white/80 hover:text-purple-400 after:w-0'
-                  } after:absolute after:bottom-0 after:left-0 after:h-[1px] after:bg-purple-400 after:transition-all hover:after:w-full`}
-                >
-                  {item.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          {/* Mobile Navigation Toggle */}
-          <button
-            className="md:hidden text-white"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/95 backdrop-blur-md">
+      <nav className="page-width flex h-20 items-center justify-between" aria-label="Main navigation">
+        <a href="#home" className="flex items-center gap-3 font-mono text-sm font-medium" aria-label="Sudip Raj Kunwar home"><Terminal size={20} /><span>sudip<span className="text-muted-foreground">.kunwar</span></span></a>
+        <div className="hidden items-center gap-1 md:flex">
+          {navigation.map(({ id, label }) => <Button key={id} asChild variant="ghost" size="sm" className={active === id ? 'text-foreground' : 'text-muted-foreground'}><a href={`#${id}`} aria-current={active === id ? 'location' : undefined}><span className={active === id ? 'text-foreground' : 'invisible'}>·</span>{label}</a></Button>)}
         </div>
-      </div>
-
-      {/* Mobile Navigation Menu */}
-      {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-gray-900/95 backdrop-blur-md border-b border-gray-800">
-          <div className="container mx-auto px-4 py-4">
-            <ul className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                <li key={item.name}>
-                  <a
-                    href={item.href}
-                    className={`block py-2 transition-colors ${
-                      activeSection === item.href.substring(1)
-                        ? 'text-purple-400'
-                        : 'text-white hover:text-purple-400'
-                    }`}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      )}
-    </nav>
+        <Button asChild variant="outline" size="sm" className="hidden md:inline-flex"><a href="https://github.com/sudiprajkunwar" target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight /></a></Button>
+        <Button variant="ghost" size="icon" className="md:hidden" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</Button>
+      </nav>
+      {open && <nav aria-label="Mobile navigation" className="border-t border-border bg-background px-5 pb-5 md:hidden">{navigation.map(({id,label}) => <Button asChild key={id} variant="ghost" className="w-full justify-start"><a href={`#${id}`} onClick={() => setOpen(false)}>{label}</a></Button>)}</nav>}
+    </header>
   );
 };
-
 export default Navbar;
