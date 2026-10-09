@@ -1,4 +1,4 @@
-import { ArrowUp, ArrowUpRight, Github, Linkedin, Terminal } from 'lucide-react';
+import { ArrowUp, Github, Linkedin, Terminal } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { navigation } from '@/lib/portfolio';
 const Footer = () => (

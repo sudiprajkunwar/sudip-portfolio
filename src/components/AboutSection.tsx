@@ -1,13 +1,14 @@
-import { GraduationCap, MapPin, Mail, ArrowUpRight } from 'lucide-react';
+import { GraduationCap, MapPin, Mail } from 'lucide-react';
 import profile from '@/assets/sudip-profile.jpg.asset.json';
 import SectionHeading from './SectionHeading';
+const profileUrl = new URL(profile.url, 'https://id-preview--61987b8a-3d58-4a2d-9886-4adab9a8f9ed.lovable.app').href;
 const AboutSection = () => (
   <section id="about" className="section-band bg-background">
     <div className="page-width">
       <SectionHeading number="02" label="Behind the code" title="Engineer. Collaborator. Problem solver" />
       <div className="grid gap-10 md:grid-cols-[280px_1fr] lg:gap-20">
         <div>
-          <div className="relative aspect-[5/4] overflow-hidden rounded-md border border-border"><img src={profile.url} alt="Sudip Raj Kunwar" className="h-full w-full object-cover grayscale" loading="lazy" /></div>
+          <div className="relative aspect-[5/4] overflow-hidden rounded-md border border-border"><img src={profileUrl} alt="Sudip Raj Kunwar" className="h-full w-full object-cover grayscale" loading="lazy" /></div>
           <div className="mt-6 flex items-center gap-2 text-xs text-muted-foreground"><MapPin size={14} /> Kathmandu, Nepal</div>
           <a href="mailto:sudip.kunwar9898@gmail.com" className="mt-3 flex items-start gap-2 text-xs text-muted-foreground hover:text-foreground"><Mail size={14} className="shrink-0" /><span className="break-all">sudip.kunwar9898@gmail.com</span></a>
           <div className="mt-7 border-t border-border pt-6">

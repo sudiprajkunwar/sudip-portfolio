@@ -1,4 +1,4 @@
-import { Code2, Smartphone, Database, Network, ArrowUpRight } from 'lucide-react';
+import { Code2, Smartphone, Database, Network } from 'lucide-react';
 import SectionHeading from './SectionHeading';
 const areas = [
   { title: 'Full-stack development', icon: Code2, description: 'From purposeful interfaces to reliable APIs. End-to-end web applications built to grow.', skills: ['React', 'TypeScript', 'Node.js', 'Express', 'NestJS'] },
